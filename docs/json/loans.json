@@ -1,0 +1,28 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "loans list",
+	"type" : "array",
+	"items" : {
+		"title" : "loan",
+		"type" : "object",
+		"properties" : {
+			"id": {
+				"description": "The unique identifier for the read",
+				"type": "number"
+			},
+			"to_who" : {
+				"description": "to who was it loaned",
+				"type" : "string"
+			},
+			"item" : {
+				"description": "What item was loaned",
+				"type" : "string"
+			},
+			"date" : {
+				"description": "When did the reading take place",
+				"type" : "string"
+			}
+		},
+		"required": ["to_who", "item"]
+	}
+}

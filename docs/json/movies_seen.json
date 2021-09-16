@@ -1,0 +1,54 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "movies that I saw",
+	"type": "object",
+	"properties": {
+		"metadata": {
+			"type": "object",
+			"properties": {
+				"schema_file": {
+					"type": "string"
+				}
+			}
+		},
+		"items": {
+			"type": "array",
+			"items": {
+				"title": "movie_saw",
+				"type": "object",
+				"properties": {
+					"name": {
+						"description": "Name of the movie",
+						"type": "string"
+					},
+					"imdb_id": {
+						"description": "The imdb id of the movie",
+						"type": "string"
+					},
+					"location": {
+						"description": "Where did I see the movie",
+						"type": "string"
+					},
+					"device": {
+						"description": "On what device did I see the movie",
+						"type": "string"
+					},
+					"date": {
+						"description": "On what date did I see the movie",
+						"type": "string"
+					},
+					"rating": {
+						"description": "What rating did I give the movie",
+						"type": "integer"
+					},
+					"review": {
+						"description": "What review did I give the movie",
+						"type": "string"
+					}
+				},
+				"required": ["name", "imdb_id", "location", "device", "date", "rating", "review"]
+			}
+		}
+	},
+	"required": ["metadata", "items"]
+}

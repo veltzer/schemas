@@ -1,0 +1,32 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Contacts list",
+	"type" : "array",
+	"items" : {
+		"title" : "contact",
+		"type" : "object",
+		"properties" : {
+			"id": {
+				"description": "The unique identifier for a product",
+				"type": "number"
+			},
+			"firstname" : {
+				"description": "The first name of the person",
+				"type" : "string"
+			},
+			"surname" : {
+				"description": "The sur name of the person",
+				"type" : "string"
+			},
+			"tags": {
+				"type": "array",
+				"items": {
+					"type": "string"
+				},
+				"minItems": 1,
+				"uniqueItems": true
+			}
+		},
+		"required": ["id", "firstname", "surname"]
+	}
+}
