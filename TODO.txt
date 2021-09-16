@@ -1,0 +1,3 @@
+- get ridd of the makefile and make pydmt the only builder for this repo.
+- make pydmt check that my schemas are ok.
+	(schema validation and not only json validation).
