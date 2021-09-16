@@ -8,9 +8,9 @@ DO_MKDBG:=0
 # code #
 ########
 JSON:=$(shell find docs/json -type f -and -name "*.json")
-JSON_CHECK:=$(addprefix out/check/,$(addsuffix .stamp, $(SCHEMAS_JSON)))
+JSON_CHECK:=$(addprefix out/check/,$(addsuffix .stamp, $(JSON)))
 YAML:=$(shell find docs/yaml -type f -and -name "*.yaml")
-YAML_CHECK:=$(addprefix out/check/,$(addsuffix .stamp, $(SCHEMAS_JSON)))
+YAML_CHECK:=$(addprefix out/check/,$(addsuffix .stamp, $(YAML)))
 
 # silent stuff
 ifeq ($(DO_MKDBG),1)
@@ -25,7 +25,7 @@ endif # DO_MKDBG
 # rules #
 #########
 .PHONY: all
-all: $(JSONS_CHECK) $(YAML_CHECK)
+all: $(JSON_CHECK) $(YAML_CHECK)
 
 .PHONY: debug
 debug:
@@ -45,24 +45,23 @@ clean_hard:
 ############
 # patterns #
 ############
-$(JSONS_CHECK): out/check/%.stamp: %
+$(JSON_CHECK): out/check/%.stamp: %
 	$(info doing [$@])
 	$(Q)python -m json.tool $< > /dev/null
 	$(Q)mkdir -p $(dir $@)
 	$(Q)touch $@
 $(YAML_CHECK): out/check/%.stamp: %
 	$(info doing [$@])
-	$(Q)pycmdutils --validate_yaml $<
+	$(Q)pycmdtools validate_yaml $<
 	$(Q)mkdir -p $(dir $@)
 	$(Q)touch $@
 
-# $(JSONS_VALIDATE): out/validate/%.stamp: %
+# $(JSON_VALIDATE): out/validate/%.stamp: %
 # 	$(info doing [$@])
 # 	$(Q)mkdir -p $(dir $@)
 # 	$(Q)jsonschema -i $< schemas/json/$(basename $(notdir $@))
 # 	$(Q)touch $@
-
-# $(YAMLS_JSONS): out/yaml2json/%.yaml: %
+# $(YAMLS_JSON): out/yaml2json/%.yaml: %
 # 	$(info doing [$@])
 # 	$(Q)mkdir -p $(dir $@)
 # 	$(Q)yq . < $< > $@
