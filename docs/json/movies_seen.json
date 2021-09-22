@@ -46,7 +46,7 @@
 						"type": "string"
 					}
 				},
-				"required": ["name", "imdb_id", "location", "device", "date", "rating", "review"]
+				"required": ["name", "imdb_id", "location", "device", "rating", "review"]
 			}
 		}
 	},
