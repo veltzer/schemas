@@ -44,6 +44,13 @@
 					"review": {
 						"description": "What review did I give the movie",
 						"type": "string"
+					},
+					"with": {
+						"description": "Who did I see it with",
+						"type": "array",
+						"items": {
+							"type": "string"
+						}
 					}
 				},
 				"required": ["name", "imdb_id", "location", "device", "rating", "review"],
