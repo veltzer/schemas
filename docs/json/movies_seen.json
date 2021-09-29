@@ -35,7 +35,8 @@
 					},
 					"date": {
 						"description": "On what date did I see the movie",
-						"type": "string"
+						"type": "string",
+						"format": "date-time"
 					},
 					"rating": {
 						"description": "What rating did I give the movie",
