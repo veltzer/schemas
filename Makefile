@@ -26,6 +26,7 @@ endif # DO_MKDBG
 #########
 .PHONY: all
 all: $(JSON_CHECK) $(YAML_CHECK)
+	@true
 
 .PHONY: debug
 debug:
