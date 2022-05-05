@@ -1,6 +1,0 @@
-jsonschema
-JSON-Spec
-pydmt
-yq
-pycmdtools
-pymakehelper
