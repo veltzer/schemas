@@ -6,6 +6,9 @@ dev_requires = [
     "pymakehelper",
     "pydmt",
     "pyclassifiers",
+]
+
+install_requires = [
     "pycmdtools",
     "jsonschema",
     "JSON-Spec",
