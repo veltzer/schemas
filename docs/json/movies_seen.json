@@ -59,5 +59,6 @@
 			}
 		}
 	},
-	"required": ["metadata", "items"]
+	"required": ["metadata", "items"],
+	"additionalProperties": false
 }
