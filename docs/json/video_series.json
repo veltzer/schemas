@@ -21,14 +21,6 @@
 						"description": "Name of the movie",
 						"type": "string"
 					},
-					"imdb_id": {
-						"description": "The imdb id of the movie",
-						"type": "string"
-					},
-					"location": {
-						"description": "Where did I see the movie",
-						"type": "string"
-					},
 					"device": {
 						"description": "On what device did I see the movie",
 						"type": "string"
@@ -37,6 +29,21 @@
 						"description": "On what date did I see the movie",
 						"type": "string",
 						"format": "date-time"
+					},
+					"imdb_id": {
+						"description": "The imdb id of the movie",
+						"type": "string"
+					},
+					"location": {
+						"description": "Where did I see the movie",
+						"type": "string"
+					},
+					"seasons_saw": {
+						"description": "What seasons did I see",
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
 					},
 					"rating": {
 						"description": "What rating did I give the movie",
