@@ -38,8 +38,15 @@
 						"description": "Where did I see the movie",
 						"type": "string"
 					},
-					"seasons_saw": {
+					"seasons_seen": {
 						"description": "What seasons did I see",
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
+					},
+					"seasons_not_seen": {
+						"description": "What seasons didnt I see",
 						"type": "array",
 						"items": {
 							"type": "integer"
