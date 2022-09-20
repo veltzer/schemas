@@ -48,6 +48,10 @@
 						"type": "string",
 						"enum": ["hebrew", "english"]
 					},
+					"publisher": {
+						"description": "Who is the publisher",
+						"type": "string"
+					},
 					"ownings": {
 						"description": "Ownings of the book",
 						"type": "array",
