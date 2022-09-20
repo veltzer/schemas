@@ -94,7 +94,7 @@
 						}
 					}
 				},
-				"required": ["name", "authors", "language", "readings"],
+				"required": ["names", "authors", "language", "readings"],
 				"additionalProperties": false
 			}
 		}
