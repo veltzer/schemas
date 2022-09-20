@@ -17,9 +17,23 @@
 				"title": "book_read",
 				"type": "object",
 				"properties": {
-					"name": {
-						"description": "Name of the book",
-						"type": "string"
+					"names": {
+						"description": "Names of the book",
+						"type": "array",
+						"items": {
+							"title": "name of the book",
+							"type": "object",
+							"properties": {
+								"language": {
+									"description": "In which language is the name",
+									"type": "string"
+								},
+								"name": {
+									"description": "The name of the book in that language",
+									"type": "string"
+								}
+							}
+						}
 					},
 					"authors": {
 						"description": "What authors wrote the book",
