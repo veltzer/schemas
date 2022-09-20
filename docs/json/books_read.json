@@ -76,7 +76,7 @@
 						}
 					}
 				},
-				"required": ["name", "authors", "language", "ownings", "readings"],
+				"required": ["name", "authors", "language", "readings"],
 				"additionalProperties": false
 			}
 		}
