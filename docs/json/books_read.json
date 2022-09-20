@@ -1,0 +1,84 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "books that I read",
+	"type": "object",
+	"properties": {
+		"metadata": {
+			"type": "object",
+			"properties": {
+				"schema_file": {
+					"type": "string"
+				}
+			}
+		},
+		"items": {
+			"type": "array",
+			"items": {
+				"title": "book_read",
+				"type": "object",
+				"properties": {
+					"name": {
+						"description": "Name of the book",
+						"type": "string"
+					},
+					"authors": {
+						"description": "What authors wrote the book",
+						"type": "array",
+						"items": {
+							"type": "string"
+						}
+					},
+					"language": {
+						"description": "In which language was the book originally written",
+						"type": "string"
+					},
+					"ownings": {
+						"description": "Ownings of the book",
+						"type": "array",
+						"items": {
+							"title": "an owning of the book",
+							"type": "object",
+							"properties": {
+								"language": {
+									"description": "In which language do I own the book",
+									"type": "string"
+								}
+							}
+						}
+					},
+					"readings": {
+						"description": "Readings of the book",
+						"type": "array",
+						"items": {
+							"title": "a reading of the book",
+							"type": "object",
+							"properties": {
+								"language": {
+									"description": "In which language did I read the book",
+									"type": "string"
+								},
+								"date_finished_reading": {
+									"description": "On what date did I finish reading the book",
+									"type": "string",
+									"format": "date-time"
+								},
+								"rating": {
+									"description": "What rating did I give the book",
+									"type": "integer"
+								},
+								"review": {
+									"description": "What review did I give the book",
+									"type": "string"
+								}
+							}
+						}
+					}
+				},
+				"required": ["name", "authors", "language", "ownings", "readings"],
+				"additionalProperties": false
+			}
+		}
+	},
+	"required": ["metadata", "items"],
+	"additionalProperties": false
+}
