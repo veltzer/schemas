@@ -26,7 +26,8 @@
 							"properties": {
 								"language": {
 									"description": "In which language is the name",
-									"type": "string"
+									"type": "string",
+									"enum": ["hebrew", "english"]
 								},
 								"name": {
 									"description": "The name of the book in that language",
@@ -44,7 +45,8 @@
 					},
 					"language": {
 						"description": "In which language was the book originally written",
-						"type": "string"
+						"type": "string",
+						"enum": ["hebrew", "english"]
 					},
 					"ownings": {
 						"description": "Ownings of the book",
@@ -55,7 +57,8 @@
 							"properties": {
 								"language": {
 									"description": "In which language do I own the book",
-									"type": "string"
+									"type": "string",
+									"enum": ["hebrew", "english"]
 								}
 							}
 						}
@@ -69,7 +72,8 @@
 							"properties": {
 								"language": {
 									"description": "In which language did I read the book",
-									"type": "string"
+									"type": "string",
+									"enum": ["hebrew", "english"]
 								},
 								"date": {
 									"description": "On what date did I finish reading the book",
