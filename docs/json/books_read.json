@@ -57,7 +57,7 @@
 									"description": "In which language did I read the book",
 									"type": "string"
 								},
-								"date_finished_reading": {
+								"date": {
 									"description": "On what date did I finish reading the book",
 									"type": "string",
 									"format": "date-time"
@@ -70,7 +70,9 @@
 									"description": "What review did I give the book",
 									"type": "string"
 								}
-							}
+							},
+							"required": ["language", "date", "rating", "review"],
+							"additionalProperties": false
 						}
 					}
 				},
