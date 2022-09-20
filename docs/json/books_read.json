@@ -52,6 +52,10 @@
 						"description": "Who is the publisher",
 						"type": "string"
 					},
+					"isbn": {
+						"description": "What is the isbn of the book",
+						"type": "string"
+					},
 					"ownings": {
 						"description": "Ownings of the book",
 						"type": "array",
