@@ -1,0 +1,57 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "youtube videos that I saw",
+	"type": "object",
+	"properties": {
+		"metadata": {
+			"type": "object",
+			"properties": {
+				"schema_file": {
+					"type": "string"
+				}
+			}
+		},
+		"items": {
+			"type": "array",
+			"items": {
+				"title": "youtube video seen",
+				"type": "object",
+				"properties": {
+					"name": {
+						"description": "Name of the video",
+						"type": "string"
+					},
+					"id": {
+						"description": "id of the video",
+						"type": "string"
+					},
+					"date": {
+						"description": "On what date did I see the movie",
+						"type": "string",
+						"format": "date-time"
+					},
+					"device": {
+						"description": "On what device",
+						"type": "string"
+					},
+					"location": {
+						"description": "Where did I see the movie",
+						"type": "string"
+					},
+					"rating": {
+						"description": "What rating did I give the movie",
+						"type": "integer"
+					},
+					"review": {
+						"description": "What review did I give the movie",
+						"type": "string"
+					}
+				},
+				"required": ["id", "date", "review", "rating"],
+				"additionalProperties": false
+			}
+		}
+	},
+	"required": ["metadata", "items"],
+	"additionalProperties": false
+}
