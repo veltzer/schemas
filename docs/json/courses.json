@@ -1,0 +1,36 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "courses that I took",
+	"type": "object",
+	"properties": {
+		"metadata": {
+			"type": "object",
+			"properties": {
+				"schema_file": {
+					"type": "string"
+				}
+			}
+		},
+		"items": {
+			"type": "array",
+			"items": {
+				"title": "course taken",
+				"type": "object",
+				"properties": {
+					"name": {
+						"description": "Name of the course",
+						"type": "string"
+					},
+					"provider": {
+						"description": "provider of the course",
+						"type": "string"
+					}
+				},
+				"required": ["name", "provider" ],
+				"additionalProperties": false
+			}
+		}
+	},
+	"required": ["metadata", "items"],
+	"additionalProperties": false
+}
