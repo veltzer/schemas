@@ -42,16 +42,19 @@
 						"items": {
 							"title": "author of the book",
 							"type": "array",
-							"items": "object",
-							"properties": {
-								"language": {
-									"description": "In which language is the name",
-									"type": "string",
-									"enum": ["hebrew", "english"]
-								},
-								"name": {
-									"description": "The name of the author in that language",
-									"type": "string"
+							"items": {
+								"title": "name of author in a specific language",
+								"type": "object",
+								"properties": {
+									"language": {
+										"description": "In which language is the name",
+										"type": "string",
+										"enum": ["hebrew", "english"]
+									},
+									"name": {
+										"description": "The name of the author in that language",
+										"type": "string"
+									}
 								}
 							}
 
