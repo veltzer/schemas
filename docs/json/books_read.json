@@ -40,7 +40,21 @@
 						"description": "What authors wrote the book",
 						"type": "array",
 						"items": {
-							"type": "string"
+							"title": "author of the book",
+							"type": "array",
+							"items": "object",
+							"properties": {
+								"language": {
+									"description": "In which language is the name",
+									"type": "string",
+									"enum": ["hebrew", "english"]
+								},
+								"name": {
+									"description": "The name of the author in that language",
+									"type": "string"
+								}
+							}
+
 						}
 					},
 					"language": {
