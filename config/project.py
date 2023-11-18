@@ -1,5 +1,8 @@
 name = "schemas"
-description_short = "Demos for the d language"
+description_short = "Various schemas that I need web access to"
 keywords = [
-    "demos",
+    "schema",
+    "yaml",
+    "json",
+    "xml",
 ]
