@@ -1,0 +1,7 @@
+# THIS IS AN AUTO-GENERATED FILE. DO NOT EDIT!
+pycmdtools
+jsonschema
+JSON-Spec
+yq
+pymakehelper
+pydmt
