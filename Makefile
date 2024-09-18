@@ -3,6 +3,8 @@
 ##############
 # do you want to show the commands executed ?
 DO_MKDBG:=0
+# do you want dependency on the Makefile itself ?
+DO_ALLDEP:=1
 
 ########
 # code #
