@@ -68,3 +68,10 @@ $(YAML_CHECK): out/check/%.stamp: %
 # 	$(info doing [$@])
 # 	$(Q)mkdir -p $(dir $@)
 # 	$(Q)yq . < $< > $@
+
+##########
+# alldep #
+##########
+ifeq ($(DO_ALLDEP),1)
+.EXTRA_PREREQS+=$(foreach mk, ${MAKEFILE_LIST},$(abspath ${mk}))
+endif # DO_ALLDEP
