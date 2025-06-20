@@ -38,12 +38,9 @@
 					}
 				},
 				"required": [
-					"name",
 					"id",
 					"date_utcz",
 					"date_timezone",
-					"location",
-					"device",
 					"review",
 					"rating"
 				],
