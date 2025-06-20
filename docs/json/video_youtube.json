@@ -3,14 +3,6 @@
 	"title": "youtube videos that I saw",
 	"type": "object",
 	"properties": {
-		"metadata": {
-			"type": "object",
-			"properties": {
-				"schema_file": {
-					"type": "string"
-				}
-			}
-		},
 		"items": {
 			"type": "array",
 			"items": {
@@ -67,6 +59,6 @@
 			}
 		}
 	},
-	"required": ["metadata", "items"],
+	"required": ["items"],
 	"additionalProperties": false
 }
