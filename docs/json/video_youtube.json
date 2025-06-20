@@ -4,8 +4,7 @@
 	"type": "object",
 	"properties": {
 		"$schema": {
-			"type": "string",
-			"format": "uri"
+			"$ref": "https://veltzer.github.io/schemas/json/common.json#/$defs/$schema"
 		},
 		"items": {
 			"type": "array",
@@ -14,51 +13,40 @@
 				"type": "object",
 				"properties": {
 					"name": {
-						"description": "Name of the video",
-						"type": "string"
+						"$ref": "https://veltzer.github.io/schemas/json/common.json#/$defs/name"
 					},
 					"id": {
-						"description": "id of the video",
-						"type": "string"
+						"$ref": "https://veltzer.github.io/schemas/json/common.json#/$defs/id"
 					},
-					"date": {
-						"description": "On what date did I see the movie (must be in UTCZ format)",
-						"type": "string",
-						"format": "date-time",
-						"pattern": "Z$"
+					"date_utcz": {
+						"$ref": "https://veltzer.github.io/schemas/json/common.json#/$defs/date_utcz"
 					},
-					"timezone": {
-						"description": "The IANA timezone name for the date. Must be one of the specified values.",
-						"type": "string",
-						"enum": [
-							"Asia/Jerusalem",
-							"America/New_York",
-							"America/Los_Angeles",
-							"Europe/London",
-							"Europe/Paris",
-							"Asia/Tokyo",
-							"Australia/Sydney",
-							"UTC"
-						]
-					},
-					"device": {
-						"description": "On what device",
-						"type": "string"
+					"date_timezone": {
+						"$ref": "https://veltzer.github.io/schemas/json/common.json#/$defs/date_timezone"
 					},
 					"location": {
-						"description": "Where did I see the movie",
-						"type": "string"
+						"$ref": "https://veltzer.github.io/schemas/json/common.json#/$defs/location"
+					},
+					"device": {
+						"$ref": "https://veltzer.github.io/schemas/json/common.json#/$defs/device"
 					},
 					"rating": {
-						"description": "What rating did I give the movie",
-						"type": "integer"
+						"$ref": "https://veltzer.github.io/schemas/json/common.json#/$defs/rating"
 					},
 					"review": {
-						"description": "What review did I give the movie",
-						"type": "string"
+						"$ref": "https://veltzer.github.io/schemas/json/common.json#/$defs/review"
 					}
 				},
-				"required": ["id", "date", "timezone", "review", "rating"],
+				"required": [
+					"name",
+					"id",
+					"date_utcz",
+					"date_timezone",
+					"location",
+					"device",
+					"review",
+					"rating"
+				],
 				"additionalProperties": false
 			}
 		}

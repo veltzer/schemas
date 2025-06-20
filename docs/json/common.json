@@ -55,6 +55,10 @@
 		"imdb_id": {
 			"description": "The imdb id of the movie",
 			"type": "string"
+		},
+		"id": {
+			"description": "id of the video",
+			"type": "string"
 		}
 	}
 }
