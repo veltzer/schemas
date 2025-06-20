@@ -103,9 +103,24 @@
 									"enum": ["hebrew", "english"]
 								},
 								"date": {
-									"description": "On what date did I finish reading the book",
+									"description": "On what date did I finish reading the book (must be in UTCZ format)",
 									"type": "string",
-									"format": "date-time"
+									"format": "date-time",
+									"pattern": "Z$"
+								},
+								"timezone": {
+									"description": "The IANA timezone name for the date. Must be one of the specified values.",
+									"type": "string",
+									"enum": [
+										"Asia/Jerusalem",
+										"America/New_York",
+										"America/Los_Angeles",
+										"Europe/London",
+										"Europe/Paris",
+										"Asia/Tokyo",
+										"Australia/Sydney",
+										"UTC"
+									]
 								},
 								"rating": {
 									"description": "What rating did I give the book",
@@ -116,7 +131,7 @@
 									"type": "string"
 								}
 							},
-							"required": ["language", "date", "rating", "review"],
+							"required": ["language", "date", "timezone", "rating", "review"],
 							"additionalProperties": false
 						}
 					}
