@@ -4,8 +4,7 @@
 	"type": "object",
 	"properties": {
 		"$schema": {
-			"type": "string",
-			"format": "uri"
+			"$ref": "https://veltzer.github.io/schemas/json/common.json#/$defs/$schema"
 		},
 		"items": {
 			"type": "array",
@@ -14,15 +13,13 @@
 				"type": "object",
 				"properties": {
 					"name": {
-						"description": "Name of the course",
-						"type": "string"
+						"$ref": "https://veltzer.github.io/schemas/json/common.json#/$defs/name"
 					},
-					"provider": {
-						"description": "provider of the course",
-						"type": "string"
+					"course_provider": {
+						"$ref": "https://veltzer.github.io/schemas/json/common.json#/$defs/course_provider"
 					}
 				},
-				"required": ["name", "provider" ],
+				"required": ["name", "course_provider" ],
 				"additionalProperties": false
 			}
 		}

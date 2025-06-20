@@ -73,6 +73,16 @@
 			"items": {
 				"type": "integer"
 			}
+		},
+		"course_provider": {
+			"description": "provider of the course",
+			"type": "string",
+			"enum": [
+				"Coursera",
+				"MySQLAB",
+				"AWS",
+				"Sun Microsystems"
+			]
 		}
 	}
 }
