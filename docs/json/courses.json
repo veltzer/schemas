@@ -3,6 +3,10 @@
 	"title": "courses that I took",
 	"type": "object",
 	"properties": {
+		"$schema": {
+			"type": "string",
+			"format": "uri"
+		},
 		"items": {
 			"type": "array",
 			"items": {
