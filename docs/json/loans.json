@@ -19,7 +19,7 @@
 				"type" : "string"
 			},
 			"date" : {
-				"description": "When did the reading take place",
+				"description": "When did the loaning take place",
 				"type" : "string"
 			}
 		},
