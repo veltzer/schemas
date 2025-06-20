@@ -3,6 +3,10 @@
 	"title": "movies that I saw",
 	"type": "object",
 	"properties": {
+		"$schema": {
+			"type": "string",
+			"format": "uri"
+		},
 		"items": {
 			"type": "array",
 			"items": {
