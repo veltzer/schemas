@@ -45,7 +45,7 @@
 					"imdb_id",
 					"location",
 					"device",
-					"date",
+					"date_utcz",
 					"date_timezone",
 					"rating",
 					"review",
