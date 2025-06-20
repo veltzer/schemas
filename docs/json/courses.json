@@ -31,6 +31,6 @@
 			}
 		}
 	},
-	"required": ["metadata", "items"],
+	"required": ["items"],
 	"additionalProperties": false
 }
