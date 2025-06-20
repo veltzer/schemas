@@ -3,14 +3,6 @@
 	"title": "courses that I took",
 	"type": "object",
 	"properties": {
-		"metadata": {
-			"type": "object",
-			"properties": {
-				"schema_file": {
-					"type": "string"
-				}
-			}
-		},
 		"items": {
 			"type": "array",
 			"items": {
