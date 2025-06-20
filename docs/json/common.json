@@ -59,6 +59,20 @@
 		"id": {
 			"description": "id of the video",
 			"type": "string"
+		},
+		"seasons_seen": {
+			"description": "What seasons did I see",
+			"type": "array",
+			"items": {
+				"type": "integer"
+			}
+		},
+		"seasons_not_seen": {
+			"description": "What seasons didnt I see",
+			"type": "array",
+			"items": {
+				"type": "integer"
+			}
 		}
 	}
 }
