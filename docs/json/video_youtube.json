@@ -26,9 +26,24 @@
 						"type": "string"
 					},
 					"date": {
-						"description": "On what date did I see the movie",
+						"description": "On what date did I see the movie (must be in UTCZ format)",
 						"type": "string",
-						"format": "date-time"
+						"format": "date-time",
+						"pattern": "Z$"
+					},
+					"timezone": {
+						"description": "The IANA timezone name for the date. Must be one of the specified values.",
+						"type": "string",
+						"enum": [
+							"Asia/Jerusalem",
+							"America/New_York",
+							"America/Los_Angeles",
+							"Europe/London",
+							"Europe/Paris",
+							"Asia/Tokyo",
+							"Australia/Sydney",
+							"UTC"
+						]
 					},
 					"device": {
 						"description": "On what device",
@@ -47,7 +62,7 @@
 						"type": "string"
 					}
 				},
-				"required": ["id", "date", "review", "rating"],
+				"required": ["id", "date", "timezone", "review", "rating"],
 				"additionalProperties": false
 			}
 		}
