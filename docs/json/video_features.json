@@ -25,7 +25,7 @@
 						"$ref": "https://veltzer.github.io/schemas/json/common.json#/$defs/device"
 					},
 					"date_utcz": {
-						"$ref": "https://veltzer.github.io/schemas/json/common.json#/$defs/date"
+						"$ref": "https://veltzer.github.io/schemas/json/common.json#/$defs/date_utcz"
 					},
 					"date_timezone": {
 						"$ref": "https://veltzer.github.io/schemas/json/common.json#/$defs/date_timezone"
