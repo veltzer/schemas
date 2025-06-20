@@ -3,6 +3,10 @@
 	"title": "books that I read",
 	"type": "object",
 	"properties": {
+		"$schema": {
+			"type": "string",
+			"format": "uri"
+		},
 		"items": {
 			"type": "array",
 			"items": {
