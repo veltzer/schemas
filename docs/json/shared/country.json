@@ -1,4 +1,5 @@
 {
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"$defs": {
 		"country": {
 			"description": "A valid country name from the ISO 3166-1 standard list.",

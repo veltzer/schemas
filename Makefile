@@ -64,8 +64,9 @@ clean_hard:
 $(JSON_CHECK): out/check/%.stamp: %
 	$(info doing [$@])
 	$(Q)pymakehelper only_print_on_error python -m json.tool $<
-	$(Q)pymakehelper only_print_on_error check-jsonschema --check-metaschema $<
+	$(Q)pymakehelper only_print_on_error check-jsonschema --schemafile $$(yq -r '.["$$schema"]' $<)  $<
 	$(Q)pymakehelper touch_mkdir $@
+# $(Q)pymakehelper only_print_on_error check-jsonschema --check-metaschema $<
 # $(Q)node_modules/.bin/ajv compile -r "docs/json/shared/common.json" -c ajv-formats -s $<
 $(YAML_CHECK): out/check/%.stamp: %
 	$(info doing [$@])
