@@ -208,7 +208,7 @@
 			"description": "A collection of countries",
 			"type": "array",
 			"items": {
-				"$ref": "#/defs/country"
+				"$ref": "#/$defs/country"
 			}
 		}
 	}
