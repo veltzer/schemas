@@ -78,6 +78,10 @@
 			"description": "Description of something",
 			"type": "string"
 		},
+		"duration": {
+			"description": "Duration of something",
+			"type": "string"
+		},
 		"remark": {
 			"description": "Remark about something",
 			"type": "string"
