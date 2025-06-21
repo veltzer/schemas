@@ -14,6 +14,12 @@
 				"description": "...",
 				"type": "object",
 				"properties": {
+					"name": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/name"
+					},
+					"description": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/description"
+					},
 					"location": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/location"
 					},
@@ -34,9 +40,6 @@
 					},
 					"with": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/with"
-					},
-					"name": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/name"
 					},
 					"lecturers": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/lecturers"

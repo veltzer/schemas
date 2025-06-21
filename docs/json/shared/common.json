@@ -56,6 +56,10 @@
 			"description": "Name of the movie",
 			"type": "string"
 		},
+		"description": {
+			"description": "Description of something",
+			"type": "string"
+		},
 		"location": {
 			"description": "Where did I see the movie",
 			"type": "string"
