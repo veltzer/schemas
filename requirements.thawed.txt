@@ -5,3 +5,4 @@ JSON-Spec
 yq
 pymakehelper
 pydmt
+check-jsonschema

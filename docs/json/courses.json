@@ -1,6 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"title": "courses that I took",
+	"title": "courses.json",
+	"description": "Courses that I took",
 	"type": "object",
 	"properties": {
 		"$schema": {
@@ -9,7 +10,8 @@
 		"items": {
 			"type": "array",
 			"items": {
-				"title": "course taken",
+				"title": "...",
+				"description": "...",
 				"type": "object",
 				"properties": {
 					"name": {

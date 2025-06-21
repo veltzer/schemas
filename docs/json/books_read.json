@@ -1,6 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"title": "books that I read",
+	"title": "books_read.json",
+	"description": "...",
 	"type": "object",
 	"properties": {
 		"$schema": {
@@ -10,7 +11,8 @@
 		"items": {
 			"type": "array",
 			"items": {
-				"title": "book_read",
+				"title": "...",
+				"description": "...",
 				"type": "object",
 				"properties": {
 					"names": {

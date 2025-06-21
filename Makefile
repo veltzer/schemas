@@ -5,6 +5,10 @@
 DO_MKDBG:=0
 # do you want dependency on the Makefile itself ?
 DO_ALLDEP:=1
+# do you want json checking?
+DO_CHECK_JSON:=1
+# do you want yaml checking?
+DO_CHECK_YAML:=1
 
 ########
 # code #
@@ -23,15 +27,24 @@ Q:=@
 #.SILENT:
 endif # DO_MKDBG
 
+ifeq ($(DO_CHECK_JSON),1)
+ALL+=$(JSON_CHECK)
+endif # DO_CHECK_JSON
+
+ifeq ($(DO_CHECK_YAML),1)
+ALL+=$(YAML_CHECK)
+endif # DO_CHECK_YAML
+
 #########
 # rules #
 #########
 .PHONY: all
-all: $(JSON_CHECK) $(YAML_CHECK)
+all: $(ALL)
 	@true
 
 .PHONY: debug
 debug:
+	$(info ALL is $(ALL))
 	$(info JSON is $(JSON))
 	$(info JSON_CHECK is $(JSON_CHECK))
 	$(info YAML is $(YAML))
@@ -50,14 +63,13 @@ clean_hard:
 ############
 $(JSON_CHECK): out/check/%.stamp: %
 	$(info doing [$@])
-	$(Q)python -m json.tool $< > /dev/null
-	$(Q)mkdir -p $(dir $@)
-	$(Q)touch $@
+	$(Q)pymakehelper only_print_on_error python -m json.tool $<
+	$(Q)pymakehelper only_print_on_error check-jsonschema --check-metaschema $<
+	$(Q)pymakehelper touch_mkdir $@
 $(YAML_CHECK): out/check/%.stamp: %
 	$(info doing [$@])
 	$(Q)pycmdtools validate_yaml $<
-	$(Q)mkdir -p $(dir $@)
-	$(Q)touch $@
+	$(Q)pymakehelper touch_mkdir $@
 
 # $(JSON_VALIDATE): out/validate/%.stamp: %
 # 	$(info doing [$@])

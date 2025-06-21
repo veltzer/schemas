@@ -1,24 +1,29 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "movies to see",
-	"type" : "array",
-	"items" : {
-		"title" : "movie_to_see",
-		"type" : "object",
-		"properties" : {
-			"recommended_by": {
-				"description": "Who recommended the movie",
-				"type": "string"
-			},
-			"imdb_id" : {
-				"description": "The imdb id of the movie",
-				"type" : "string"
-			},
-			"genre" : {
-				"description": "What is the genre of the movie",
-				"type" : "string"
-			}
+	"type": "object",
+	"properties": {
+		"$schema": {
+			"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/$schema"
 		},
-		"required": ["recommended_by", "imdb_id", "genre"]
+		"items" : {
+			"title" : "movie_to_see",
+			"type" : "object",
+			"properties" : {
+				"recommended_by": {
+					"description": "Who recommended the movie",
+					"type": "string"
+				},
+				"imdb_id" : {
+					"description": "The imdb id of the movie",
+					"type" : "string"
+				},
+				"genre" : {
+					"description": "What is the genre of the movie",
+					"type" : "string"
+				}
+			},
+			"required": ["recommended_by", "imdb_id", "genre"]
+		}
 	}
 }

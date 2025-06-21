@@ -9,7 +9,7 @@
 		"items": {
 			"type": "array",
 			"items": {
-				"title": "series_saw",
+				"title": "video_series",
 				"type": "object",
 				"properties": {
 					"name": {
