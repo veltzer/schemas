@@ -20,6 +20,9 @@
 					"country": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/country.json#/$defs/country"
 					},
+					"countries": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/country.json#/$defs/countries"
+					},
 					"date_utcz": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_utcz"
 					},
