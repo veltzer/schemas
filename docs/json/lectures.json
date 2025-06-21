@@ -35,14 +35,18 @@
 					"with": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/with"
 					},
-					"remark": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/remark"
+					"name": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/name"
 					}
 				},
 				"required": [
+					"name",
+					"lecturers",
+					"with",
 					"location",
 					"country",
-					"with"
+					"rating",
+					"review"
 				],
 				"additionalProperties": false
 			}
