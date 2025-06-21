@@ -37,6 +37,9 @@
 					},
 					"name": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/name"
+					},
+					"lecturers": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/lecturers"
 					}
 				},
 				"required": [

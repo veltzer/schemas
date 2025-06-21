@@ -45,6 +45,13 @@
 				"type": "string"
 			}
 		},
+		"lecturers": {
+			"description": "List of lecturers",
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		},
 		"name": {
 			"description": "Name of the movie",
 			"type": "string"
