@@ -40,6 +40,12 @@
 					},
 					"lecturers": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/lecturers"
+					},
+					"rating": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/rating"
+					},
+					"review": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/review"
 					}
 				},
 				"required": [
