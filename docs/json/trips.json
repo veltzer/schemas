@@ -35,8 +35,17 @@
 					"date_dmy": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_dmy"
 					},
-					"date_timezone": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_timezone"
+					"date_utcz_timezone": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_utcz_timezone"
+					},
+					"date_y_timezone": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_y_timezone"
+					},
+					"date_my_timezone": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_my_timezone"
+					},
+					"date_dmy_timezone": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_dmy_timezone"
 					},
 					"with": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/with"

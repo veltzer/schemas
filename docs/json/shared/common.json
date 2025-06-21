@@ -43,7 +43,7 @@
 				"1999"
 			]
 		},
-		"date_timezone": {
+		"date_utcz_timezone": {
 			"description": "The IANA timezone name for the date. Must be one of the specified values.",
 			"type": "string",
 			"enum": [
@@ -56,6 +56,18 @@
 				"Australia/Sydney",
 				"UTC"
 			]
+		},
+		"date_y_timezone": {
+			"$comment": "This field is an 'alias' that must conform to the exact same rules",
+			"$ref": "#/$defs/date_utcz_timezone"
+		},
+		"date_my_timezone": {
+			"$comment": "This field is an 'alias' that must conform to the exact same rules",
+			"$ref": "#/$defs/date_utcz_timezone"
+		},
+		"date_dmy_timezone": {
+			"$comment": "This field is an 'alias' that must conform to the exact same rules",
+			"$ref": "#/$defs/date_utcz_timezone"
 		},
 		"device": {
 			"description": "On what device did I see the movie",
