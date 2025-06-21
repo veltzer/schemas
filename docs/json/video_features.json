@@ -4,7 +4,7 @@
 	"type": "object",
 	"properties": {
 		"$schema": {
-			"$ref": "https://veltzer.github.io/schemas/json/common.json#/$defs/$schema"
+			"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/$schema"
 		},
 		"items": {
 			"type": "array",
@@ -13,31 +13,31 @@
 				"type": "object",
 				"properties": {
 					"name": {
-						"$ref": "https://veltzer.github.io/schemas/json/common.json#/$defs/name"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/name"
 					},
 					"imdb_id": {
-						"$ref": "https://veltzer.github.io/schemas/json/common.json#/$defs/imdb_id"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/imdb_id"
 					},
 					"location": {
-						"$ref": "https://veltzer.github.io/schemas/json/common.json#/$defs/location"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/location"
 					},
 					"device": {
-						"$ref": "https://veltzer.github.io/schemas/json/common.json#/$defs/device"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/device"
 					},
 					"date_utcz": {
-						"$ref": "https://veltzer.github.io/schemas/json/common.json#/$defs/date_utcz"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_utcz"
 					},
 					"date_timezone": {
-						"$ref": "https://veltzer.github.io/schemas/json/common.json#/$defs/date_timezone"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_timezone"
 					},
 					"rating": {
-						"$ref": "https://veltzer.github.io/schemas/json/common.json#/$defs/rating"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/rating"
 					},
 					"review": {
-						"$ref": "https://veltzer.github.io/schemas/json/common.json#/$defs/review"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/review"
 					},
 					"with": {
-						"$ref": "https://veltzer.github.io/schemas/json/common.json#/$defs/with"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/with"
 					}
 				},
 				"required": [
