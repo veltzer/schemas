@@ -73,9 +73,8 @@ $(YAML_CHECK): out/check/%.stamp: %
 
 # $(JSON_VALIDATE): out/validate/%.stamp: %
 # 	$(info doing [$@])
-# 	$(Q)mkdir -p $(dir $@)
 # 	$(Q)jsonschema -i $< schemas/json/$(basename $(notdir $@))
-# 	$(Q)touch $@
+#	$(Q)pymakehelper touch_mkdir $@
 # $(YAMLS_JSON): out/yaml2json/%.yaml: %
 # 	$(info doing [$@])
 # 	$(Q)mkdir -p $(dir $@)
