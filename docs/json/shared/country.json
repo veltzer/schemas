@@ -203,6 +203,13 @@
 				"Zambia",
 				"Zimbabwe"
 			]
+		},
+		"countries": {
+			"description": "A collection of countries",
+			"type": "array",
+			"items": {
+				"$ref": "#/defs/country"
+			}
 		}
 	}
 }
