@@ -16,6 +16,15 @@
 			"format": "date-time",
 			"pattern": "Z$"
 		},
+		"date_dmy": {
+			"description": "A date containing only DD-MM-YYYY format.",
+			"type": "string",
+			"pattern": "^\\d{2}-\\d{2}-\\d{4}$",
+			"examples": [
+				"15-10-2023",
+				"12-05-1999"
+			]
+		},
 		"date_my": {
 			"description": "A date containing only the year and month, in MM-YYYY format.",
 			"type": "string",

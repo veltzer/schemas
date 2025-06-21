@@ -32,6 +32,9 @@
 					"date_my": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_my"
 					},
+					"date_dmy": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_dmy"
+					},
 					"date_timezone": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_timezone"
 					},
@@ -44,7 +47,6 @@
 				},
 				"required": [
 					"location",
-					"country",
 					"with"
 				],
 				"additionalProperties": false
