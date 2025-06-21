@@ -1,0 +1,53 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "trips.json",
+	"description": "...",
+	"type": "object",
+	"properties": {
+		"$schema": {
+			"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/$schema"
+		},
+		"items": {
+			"type": "array",
+			"items": {
+				"title": "...",
+				"description": "...",
+				"type": "object",
+				"properties": {
+					"location": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/location"
+					},
+					"country": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/country.json#/$defs/country"
+					},
+					"date_utcz": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_utcz"
+					},
+					"date_y": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_y"
+					},
+					"date_my": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_my"
+					},
+					"date_timezone": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_timezone"
+					},
+					"with": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/with"
+					},
+					"remark": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/remark"
+					}
+				},
+				"required": [
+					"location",
+					"country",
+					"with"
+				],
+				"additionalProperties": false
+			}
+		}
+	},
+	"required": ["items"],
+	"additionalProperties": false
+}
