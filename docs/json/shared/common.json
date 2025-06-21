@@ -57,7 +57,7 @@
 				"UTC"
 			]
 		},
-		"date_utcz_timezome": {
+		"date_utcz_timezone": {
 			"$comment": "This field is an 'alias' that must conform to the exact same rules",
 			"$ref": "#/$defs/date_timezone"
 		},
