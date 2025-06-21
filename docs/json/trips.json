@@ -52,6 +52,9 @@
 					},
 					"remark": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/remark"
+					},
+					"duration": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/duration"
 					}
 				},
 				"required": [
