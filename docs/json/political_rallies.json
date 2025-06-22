@@ -1,0 +1,55 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "political_rallies.json",
+	"description": "Political rallies that I attendePolitical rallies that I attendedd",
+	"type": "object",
+	"properties": {
+		"$schema": {
+			"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/$schema"
+		},
+		"items": {
+			"type": "array",
+			"items": {
+				"title": "video_series",
+				"type": "object",
+				"properties": {
+					"description": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/description"
+					},
+					"date_utcz": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_utcz"
+					},
+					"date_dmy": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_dmy"
+					},
+					"date_timezone": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_timezone"
+					},
+					"location": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/location"
+					},
+					"country": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/country.json#/$defs/country"
+					},
+					"with": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/with"
+					},
+					"review": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/review"
+					}
+				},
+				"required": [
+					"description",
+					"imdb_id",
+					"location",
+					"country",
+					"with",
+					"review"
+				],
+				"additionalProperties": false
+			}
+		}
+	},
+	"required": ["items"],
+	"additionalProperties": false
+}
