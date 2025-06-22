@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"title": "loans list",
+	"title": "loans.json",
 	"description": "Stuff that I loaded",
 	"type" : "array",
 	"items" : {
