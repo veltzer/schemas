@@ -1,4 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"$comment": "This schema accepts any valid JSON or YAML document without any restrictions."
+	"$comment": "This schema accepts any valid JSON or YAML document without any restrictions.",
+	"title": "any.json",
+	"description": "This schema accepts any valid JSON or YAML document without any restrictions."
 }

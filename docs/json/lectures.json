@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "lecturs.json",
-	"description": "...",
+	"description": "Lectures that I heard",
 	"type": "object",
 	"properties": {
 		"$schema": {

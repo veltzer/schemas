@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "people.json",
-	"description": "...",
+	"description": "People that I know",
 	"type": "object",
 	"properties": {
 		"$schema": {

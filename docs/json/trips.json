@@ -1,13 +1,15 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "trips.json",
-	"description": "...",
+	"description": "Trips that I have made",
 	"type": "object",
 	"properties": {
 		"$schema": {
 			"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/$schema"
 		},
 		"items": {
+			"title" : "...",
+			"description" : "...",
 			"type": "array",
 			"items": {
 				"title": "...",

@@ -1,9 +1,11 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"title": "Article read list",
+	"title": "text_articles.json",
+	"decription": "Articles that I read",
 	"type" : "array",
 	"items" : {
-		"title" : "article_read",
+		"title" : "...",
+		"description" : "...",
 		"type" : "object",
 		"properties" : {
 			"id": {

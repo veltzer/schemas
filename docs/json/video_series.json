@@ -1,6 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"title": "movies that I saw",
+	"title": "video_series.json",
+	"description": "Series that I saw",
 	"type": "object",
 	"properties": {
 		"$schema": {

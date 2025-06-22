@@ -1,13 +1,15 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"title": "movies to see",
+	"title": "movies_to_see.json",
+	"description": "Movies to see",
 	"type": "object",
 	"properties": {
 		"$schema": {
 			"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/$schema"
 		},
 		"items" : {
-			"title" : "movie_to_see",
+			"title" : "...",
+			"description" : "...",
 			"type" : "object",
 			"properties" : {
 				"recommended_by": {
