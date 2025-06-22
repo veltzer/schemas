@@ -44,9 +44,7 @@
 				"required": [
 					"name",
 					"lecturers",
-					"device",
-					"rating",
-					"review"
+					"device"
 				],
 				"additionalProperties": false
 			}
