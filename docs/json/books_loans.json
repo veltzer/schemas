@@ -1,0 +1,36 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "books_loans.json",
+	"description": "Books that I loaned",
+	"type": "object",
+	"properties": {
+		"$schema": {
+			"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/$schema"
+		},
+		"items": {
+			"type": "array",
+			"items": {
+				"title": "...",
+				"description": "...",
+				"type": "object",
+				"properties": {
+					"to": {
+						"description": "Who loaned",
+						"type": "string"
+					},
+					"what": {
+						"description": "What was loaned",
+						"type": "string"
+					}
+				},
+				"required": [
+					"to",
+					"what"
+				],
+				"additionalProperties": false
+			}
+		}
+	},
+	"required": ["items"],
+	"additionalProperties": false
+}
