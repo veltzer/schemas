@@ -1,0 +1,64 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "audio_books.json",
+	"description": "Audio books I read",
+	"type": "object",
+	"properties": {
+		"$schema": {
+			"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/$schema"
+		},
+		"items": {
+			"title" : "...",
+			"description" : "...",
+			"type": "array",
+			"items": {
+				"title": "...",
+				"description": "...",
+				"type": "object",
+				"properties": {
+					"name": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/name"
+					},
+					"imdb_id": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/imdb_id"
+					},
+					"location": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/location"
+					},
+					"device": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/device.json#/$defs/device"
+					},
+					"date_utcz": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_utcz"
+					},
+					"date_timezone": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_timezone"
+					},
+					"rating": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/rating"
+					},
+					"review": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/review"
+					},
+					"with": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/with"
+					}
+				},
+				"required": [
+					"name",
+					"imdb_id",
+					"location",
+					"device",
+					"date_utcz",
+					"date_timezone",
+					"rating",
+					"review",
+					"with"
+				],
+				"additionalProperties": false
+			}
+		}
+	},
+	"required": ["items"],
+	"additionalProperties": false
+}

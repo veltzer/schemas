@@ -1,0 +1,56 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "audio_courses.json",
+	"description": "Audio courses that I heard",
+	"type": "object",
+	"properties": {
+		"$schema": {
+			"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/$schema"
+		},
+		"items": {
+			"title" : "...",
+			"description" : "...",
+			"type": "array",
+			"items": {
+				"title": "...",
+				"description": "...",
+				"type": "object",
+				"properties": {
+					"name": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/name"
+					},
+					"lecturers": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/person.json#/$defs/people"
+					},
+					"date_utcz": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_utcz"
+					},
+					"date_timezone": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_timezone"
+					},
+					"device": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/device.json#/$defs/device"
+					},
+					"rating": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/rating"
+					},
+					"review": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/review"
+					}
+				},
+				"required": [
+					"name",
+					"lecturers",
+					"date_utcz",
+					"date_timezone",
+					"device",
+					"rating",
+					"review"
+				],
+				"additionalProperties": false
+			}
+		}
+	},
+	"required": ["items"],
+	"additionalProperties": false
+}
