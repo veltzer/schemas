@@ -7,23 +7,26 @@
 		"title" : "loan",
 		"type" : "object",
 		"properties" : {
-			"id": {
-				"description": "The unique identifier for the read",
-				"type": "number"
-			},
-			"to_who" : {
-				"description": "to who was it loaned",
-				"type" : "string"
+			"person": {
+				"$ref": "https://veltzer.github.io/schemas/json/shared/country.json#/$defs/person"
 			},
 			"item" : {
 				"description": "What item was loaned",
 				"type" : "string"
 			},
-			"date" : {
-				"description": "When did the loaning take place",
-				"type" : "string"
+			"date_utcz": {
+				"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_utcz"
+			},
+			"date_timezone": {
+				"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_timezone"
 			}
 		},
-		"required": ["to_who", "item"]
+		"required": [
+			"person",
+			"item",
+			"date_utcz",
+			"date_timezone"
+		],
+		"additionalProperties": false
 	}
 }

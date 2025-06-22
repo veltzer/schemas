@@ -32,7 +32,8 @@
 									"type": "string"
 								}
 							},
-							"required": ["language", "name"]
+							"required": ["language", "name"],
+							"additionalProperties": false
 						}
 					},
 					"authors": {
@@ -55,7 +56,11 @@
 										"type": "string"
 									}
 								},
-								"required": ["language", "name"]
+								"required": [
+									"language",
+									"name"
+								],
+								"additionalProperties": false
 							}
 
 						}

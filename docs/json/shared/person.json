@@ -1,0 +1,24 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "people.json",
+	"description": "person element",
+	"$defs": {
+		"person": {
+			"description": "A person",
+			"type": "string",
+			"enum": [
+				"Aristotle",
+				"Plato",
+				"Ayaan Hirsi Ali",
+				"Sam Harris"
+			]
+		},
+		"people": {
+			"description": "A collection of people",
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/person"
+			}
+		}
+	}
+}
