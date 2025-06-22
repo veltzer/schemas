@@ -1,25 +1,13 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"title": "text_articles.json",
-	"decription": "Articles that I read",
+	"title": "text_books.json",
+	"decription": "Books that I read",
 	"type" : "array",
 	"items" : {
 		"title" : "...",
 		"description" : "...",
 		"type" : "object",
 		"properties" : {
-			"id": {
-				"description": "The unique identifier for the read",
-				"type": "number"
-			},
-			"url" : {
-				"description": "url of the article",
-				"type" : "string"
-			},
-			"file" : {
-				"description": "file of the article",
-				"type" : "string"
-			},
 			"who": {
 				"type": "array",
 				"items": {
@@ -38,11 +26,9 @@
 			}
 		},
 		"required": [
-			"id",
 			"who",
 			"location",
 			"date"
-		],
-		"additionalProperties": false
+		]
 	}
 }
