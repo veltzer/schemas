@@ -2,31 +2,40 @@
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "loans.json",
 	"description": "Stuff that I loaded",
-	"type" : "array",
-	"items" : {
-		"title" : "loan",
-		"type" : "object",
-		"properties" : {
-			"person": {
-				"$ref": "https://veltzer.github.io/schemas/json/shared/country.json#/$defs/person"
-			},
-			"item" : {
-				"description": "What item was loaned",
-				"type" : "string"
-			},
-			"date_utcz": {
-				"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_utcz"
-			},
-			"date_timezone": {
-				"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_timezone"
-			}
+	"type": "object",
+	"properties": {
+		"$schema": {
+			"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/$schema"
 		},
-		"required": [
-			"person",
-			"item",
-			"date_utcz",
-			"date_timezone"
-		],
-		"additionalProperties": false
+		"items": {
+			"type": "array",
+			"items": {
+				"title": "...",
+				"description": "...",
+				"type": "object",
+				"properties" : {
+					"person": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/country.json#/$defs/person"
+					},
+					"item" : {
+						"description": "What item was loaned",
+						"type" : "string"
+					},
+					"date_utcz": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_utcz"
+					},
+					"date_timezone": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_timezone"
+					}
+				},
+				"required": [
+					"person",
+					"item",
+					"date_utcz",
+					"date_timezone"
+				],
+				"additionalProperties": false
+			}
+		}
 	}
 }
