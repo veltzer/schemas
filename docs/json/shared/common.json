@@ -89,10 +89,6 @@
 			"$comment": "This field is an 'alias' that must conform to the exact same rules",
 			"$ref": "#/$defs/date_timezone"
 		},
-		"device": {
-			"description": "On what device did I see the movie",
-			"type": "string"
-		},
 		"review": {
 			"description": "What review did I give the movie",
 			"type": "string"

@@ -17,7 +17,7 @@
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/name"
 					},
 					"device": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/device"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/device.json#/$defs/device"
 					},
 					"location": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/location"
