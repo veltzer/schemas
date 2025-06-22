@@ -28,6 +28,9 @@
 					"date_timezone": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_timezone"
 					},
+					"location": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/location"
+					},
 					"device": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/device.json#/$defs/device"
 					},
@@ -41,8 +44,6 @@
 				"required": [
 					"name",
 					"lecturers",
-					"date_utcz",
-					"date_timezone",
 					"device",
 					"rating",
 					"review"
