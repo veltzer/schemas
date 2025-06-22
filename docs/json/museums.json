@@ -20,6 +20,9 @@
 					"city": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/city.json#/$defs/city"
 					},
+					"tickets": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/tickets"
+					},
 					"rating": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/rating"
 					},

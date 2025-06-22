@@ -10,6 +10,10 @@
 			"minimum": 1,
 			"maximum": 10
 		},
+		"tickets": {
+			"type": "integer",
+			"minimum": 1
+		},
 		"date_utcz": {
 			"description": "On what date did I see the movie (must be in UTCZ format)",
 			"type": "string",
@@ -47,14 +51,16 @@
 			"description": "The IANA timezone name for the date. Must be one of the specified values.",
 			"type": "string",
 			"enum": [
+				"Asia/Tokyo",
 				"Asia/Jerusalem",
 				"America/New_York",
 				"America/Los_Angeles",
 				"Europe/London",
 				"Europe/Paris",
-				"Asia/Tokyo",
-				"Australia/Sydney",
+				"Europe/Mosciw",
 				"Europe/Kiev",
+				"Europe/Madrid",
+				"Australia/Sydney",
 				"UTC"
 			]
 		},
