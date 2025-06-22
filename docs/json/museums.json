@@ -32,6 +32,9 @@
 					"remark": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/remark"
 					},
+					"url": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/url"
+					},
 					"with": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/with"
 					},
