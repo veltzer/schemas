@@ -8,8 +8,8 @@
 			"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/$schema"
 		},
 		"items": {
-			"title" : "...",
-			"description" : "...",
+			"title": "...",
+			"description": "...",
 			"type": "array",
 			"items": {
 				"title": "...",
@@ -43,9 +43,9 @@
 					"review": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/review"
 					},
-					"progress" : {
+					"progress": {
 						"description": "What progress am I making",
-						"type" : "string"
+						"type": "string"
 					}
 				},
 				"required": [

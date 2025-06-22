@@ -13,13 +13,13 @@
 				"title": "...",
 				"description": "...",
 				"type": "object",
-				"properties" : {
+				"properties": {
 					"person": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/country.json#/$defs/person"
 					},
-					"item" : {
+					"item": {
 						"description": "What item was loaned",
-						"type" : "string"
+						"type": "string"
 					},
 					"date_utcz": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_utcz"

@@ -17,21 +17,21 @@
 						"description": "The unique identifier for the read",
 						"type": "number"
 					},
-					"url" : {
+					"url": {
 						"description": "url of the article",
-						"type" : "string"
+						"type": "string"
 					},
-					"file" : {
+					"file": {
 						"description": "file of the article",
-						"type" : "string"
+						"type": "string"
 					},
-					"location" : {
+					"location": {
 						"description": "Where did the reading take place",
-						"type" : "string"
+						"type": "string"
 					},
-					"date_utcz" : {
+					"date_utcz": {
 						"description": "When did the reading take place",
-						"type" : "string"
+						"type": "string"
 					}
 				}
 			},
