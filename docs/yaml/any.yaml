@@ -1,0 +1,6 @@
+---
+# yaml-language-server: $schema=https://json-schema.org/draft/2020-12/schema
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$comment: "This schema accepts any valid JSON or YAML document without any restrictions."
+title: "any.yaml"
+description: "This schema accepts any valid JSON or YAML document without any restrictions."
