@@ -19,14 +19,8 @@
 					"name": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/name"
 					},
-					"imdb_id": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/imdb_id"
-					},
-					"location": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/location"
-					},
-					"device": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/device.json#/$defs/device"
+					"authors": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/person.json#/$defs/people"
 					},
 					"date_utcz": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_utcz"
@@ -34,26 +28,28 @@
 					"date_timezone": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_timezone"
 					},
+					"device": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/device.json#/$defs/device"
+					},
+					"location": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/location"
+					},
 					"rating": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/rating"
 					},
 					"review": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/review"
 					},
-					"with": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/with"
+					"progress" : {
+						"description": "What progress am I making",
+						"type" : "string"
 					}
 				},
 				"required": [
 					"name",
-					"imdb_id",
+					"authors",
 					"location",
-					"device",
-					"date_utcz",
-					"date_timezone",
-					"rating",
-					"review",
-					"with"
+					"device"
 				],
 				"additionalProperties": false
 			}
