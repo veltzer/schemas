@@ -15,7 +15,7 @@
 				"type": "object",
 				"properties": {
 					"url": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/company.json#/$defs/url"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/url"
 					}
 				},
 				"required": [
