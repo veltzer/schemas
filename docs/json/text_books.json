@@ -37,12 +37,14 @@
 				}
 			},
 			"required": [
-				"id",
-				"who",
-				"location",
-				"date"
+				"name",
+				"authors",
+				"rating",
+				"review"
 			],
 			"additionalProperties": false
 		}
-	}
+	},
+	"required": ["items"],
+	"additionalProperties": false
 }

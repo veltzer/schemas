@@ -43,5 +43,7 @@
 			],
 			"additionalProperties": false
 		}
-	}
+	},
+	"required": ["items"],
+	"additionalProperties": false
 }
