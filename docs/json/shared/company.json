@@ -1,0 +1,20 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$defs": {
+		"company": {
+			"description": "A valid company name",
+			"type": "string",
+			"enum": [
+				"Schema",
+				"Google"
+			]
+		},
+		"countries": {
+			"description": "A collection of companies",
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/company"
+			}
+		}
+	}
+}
