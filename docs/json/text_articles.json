@@ -2,47 +2,46 @@
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "text_articles.json",
 	"decription": "Articles that I read",
-	"type" : "array",
-	"items" : {
-		"title" : "...",
-		"description" : "...",
-		"type" : "object",
-		"properties" : {
-			"id": {
-				"description": "The unique identifier for the read",
-				"type": "number"
-			},
-			"url" : {
-				"description": "url of the article",
-				"type" : "string"
-			},
-			"file" : {
-				"description": "file of the article",
-				"type" : "string"
-			},
-			"who": {
-				"type": "array",
-				"items": {
-					"type": "string"
-				},
-				"minItems": 1,
-				"uniqueItems": true
-			},
-			"location" : {
-				"description": "Where did the reading take place",
-				"type" : "string"
-			},
-			"date" : {
-				"description": "When did the reading take place",
-				"type" : "string"
-			}
+	"type": "object",
+	"properties": {
+		"$schema": {
+			"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/$schema"
 		},
-		"required": [
-			"id",
-			"who",
-			"location",
-			"date"
-		],
-		"additionalProperties": false
+		"items": {
+			"type": "array",
+			"items": {
+				"title": "video_series",
+				"type": "object",
+				"properties": {
+					"id": {
+						"description": "The unique identifier for the read",
+						"type": "number"
+					},
+					"url" : {
+						"description": "url of the article",
+						"type" : "string"
+					},
+					"file" : {
+						"description": "file of the article",
+						"type" : "string"
+					},
+					"location" : {
+						"description": "Where did the reading take place",
+						"type" : "string"
+					},
+					"date_utcz" : {
+						"description": "When did the reading take place",
+						"type" : "string"
+					}
+				}
+			},
+			"required": [
+				"id",
+				"who",
+				"location",
+				"date"
+			],
+			"additionalProperties": false
+		}
 	}
 }
