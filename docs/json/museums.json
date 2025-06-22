@@ -46,9 +46,7 @@
 					"name",
 					"rating",
 					"review",
-					"date_utcz",
-					"date_dmy",
-					"date_utcz_timestamp"
+					"with"
 				],
 				"additionalProperties": false
 			}
