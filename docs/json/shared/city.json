@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "city.json",
-	"description": "city element",
+	"description": "City element",
 	"$defs": {
 		"city": {
 			"description": "A valid city name",

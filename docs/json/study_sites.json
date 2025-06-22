@@ -10,8 +10,6 @@
 		"items": {
 			"type": "array",
 			"items": {
-				"title": "...",
-				"description": "...",
 				"type": "object",
 				"properties": {
 					"url": {

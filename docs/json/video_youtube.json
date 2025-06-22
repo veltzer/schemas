@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "video_youtube.json",
-	"description": "youtube videos that I saw",
+	"description": "Youtube videos that I saw",
 	"type": "object",
 	"properties": {
 		"$schema": {

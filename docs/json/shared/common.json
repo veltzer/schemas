@@ -8,20 +8,20 @@
 			"format": "uri"
 		},
 		"rating": {
+			"description": "A ratings from 1 to 10",
 			"type": "integer",
 			"minimum": 1,
-			"maximum": 10,
-			"description": "A ratings from 1 to 10"
+			"maximum": 10
 		},
 		"tickets": {
+			"description": "How many tickets do I have",
 			"type": "integer",
-			"minimum": 1,
-			"description": "How many tickets do I have"
+			"minimum": 1
 		},
 		"url": {
+			"description": "A valid URL",
 			"type": "string",
-			"format": "uri",
-			"description": "A valid URL"
+			"format": "uri"
 		},
 		"date_utcz": {
 			"description": "On what date did I see the movie (must be in UTCZ format)",

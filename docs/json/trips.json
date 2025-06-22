@@ -8,12 +8,8 @@
 			"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/$schema"
 		},
 		"items": {
-			"title": "...",
-			"description": "...",
 			"type": "array",
 			"items": {
-				"title": "...",
-				"description": "...",
 				"type": "object",
 				"properties": {
 					"location": {

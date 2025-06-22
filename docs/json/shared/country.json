@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "country.json",
-	"description": "country element",
+	"description": "Country element",
 	"$defs": {
 		"country": {
 			"description": "A valid country name from the ISO 3166-1 standard list.",

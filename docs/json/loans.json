@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
 	"title": "loans.json",
-	"description": "Stuff that I loaded",
+	"description": "Stuff that I loaned",
 	"type": "object",
 	"properties": {
 		"$schema": {
@@ -10,8 +10,6 @@
 		"items": {
 			"type": "array",
 			"items": {
-				"title": "...",
-				"description": "...",
 				"type": "object",
 				"properties": {
 					"person": {
