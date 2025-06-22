@@ -14,25 +14,17 @@
 				"description": "...",
 				"type": "object",
 				"properties": {
-					"id": {
-						"description": "The unique identifier for the read",
-						"type": "number"
+					"name": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/name"
 					},
-					"url": {
-						"description": "url of the article",
-						"type": "string"
+					"authors": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/person.json#/$defs/people"
 					},
-					"file": {
-						"description": "file of the article",
-						"type": "string"
+					"rating": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/rating"
 					},
-					"location": {
-						"description": "Where did the reading take place",
-						"type": "string"
-					},
-					"date_utcz": {
-						"description": "When did the reading take place",
-						"type": "string"
+					"review": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/review"
 					}
 				}
 			},
