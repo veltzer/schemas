@@ -40,7 +40,6 @@
 				},
 				"required": [
 					"description",
-					"imdb_id",
 					"location",
 					"country",
 					"with",
