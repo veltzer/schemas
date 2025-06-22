@@ -297,38 +297,8 @@
                     const GITHUB_USER = 'veltzer';
                     const GITHUB_REPO = 'schemas';
                     
-                    // Fetch all JSON files from the repository
-                    const response = await fetch(`https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents`);
-                    const files = await response.json();
-                    
-                    // Filter for JSON schema files
-                    const jsonFiles = files.filter(file => 
-                        file.name.endsWith('.json') || 
-                        file.name.endsWith('.schema.json')
-                    );
-
-                    // Load each schema file
-                    for (const file of jsonFiles) {
-                        try {
-                            const schemaResponse = await fetch(file.download_url);
-                            const schemaData = await schemaResponse.json();
-                            
-                            this.schemas.push({
-                                name: file.name,
-                                title: schemaData.title || this.formatTitle(file.name),
-                                description: schemaData.description || 'No description available',
-                                url: file.download_url,
-                                htmlUrl: file.html_url,
-                                size: file.size,
-                                lastModified: file.sha,
-                                schema: schemaData,
-                                fileMatch: schemaData.fileMatch || [],
-                                examples: schemaData.examples || []
-                            });
-                        } catch (error) {
-                            console.error(`Error loading schema ${file.name}:`, error);
-                        }
-                    }
+                    // Recursively scan docs/json folder
+                    await this.scanDirectory(`${GITHUB_USER}/${GITHUB_REPO}`, 'docs/json');
 
                     this.filteredSchemas = [...this.schemas];
                     document.getElementById('loading').style.display = 'none';
@@ -336,6 +306,48 @@
                 } catch (error) {
                     console.error('Error loading schemas:', error);
                     document.getElementById('loading').textContent = 'Error loading schemas. Please check the repository configuration.';
+                }
+            }
+
+            async scanDirectory(repo, path) {
+                try {
+                    const response = await fetch(`https://api.github.com/repos/${repo}/contents/${path}`);
+                    const items = await response.json();
+                    
+                    for (const item of items) {
+                        if (item.type === 'file' && (item.name.endsWith('.json') || item.name.endsWith('.schema.json'))) {
+                            // Process JSON schema file
+                            await this.loadSchemaFile(item);
+                        } else if (item.type === 'dir') {
+                            // Recursively scan subdirectory
+                            await this.scanDirectory(repo, item.path);
+                        }
+                    }
+                } catch (error) {
+                    console.error(`Error scanning directory ${path}:`, error);
+                }
+            }
+
+            async loadSchemaFile(file) {
+                try {
+                    const schemaResponse = await fetch(file.download_url);
+                    const schemaData = await schemaResponse.json();
+                    
+                    this.schemas.push({
+                        name: file.name,
+                        path: file.path,
+                        title: schemaData.title || this.formatTitle(file.name),
+                        description: schemaData.description || 'No description available',
+                        url: file.download_url,
+                        htmlUrl: file.html_url,
+                        size: file.size,
+                        lastModified: file.sha,
+                        schema: schemaData,
+                        fileMatch: schemaData.fileMatch || [],
+                        examples: schemaData.examples || []
+                    });
+                } catch (error) {
+                    console.error(`Error loading schema ${file.name}:`, error);
                 }
             }
 
@@ -391,7 +403,7 @@
                         <p class="schema-description">${schema.description}</p>
                         
                         <div class="schema-meta">
-                            <span class="meta-tag">File: ${schema.name}</span>
+                            <span class="meta-tag">Path: ${schema.path || schema.name}</span>
                             ${schema.fileMatch.length > 0 ? `<span class="meta-tag">Matches: ${fileTypes}</span>` : ''}
                             <span class="meta-tag">Size: ${this.formatFileSize(schema.size)}</span>
                         </div>
