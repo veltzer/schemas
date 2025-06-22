@@ -1,0 +1,59 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "museums.json",
+	"description": "Museums that I saw",
+	"type": "object",
+	"properties": {
+		"$schema": {
+			"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/$schema"
+		},
+		"items": {
+			"type": "array",
+			"items": {
+				"title": "...",
+				"description": "...",
+				"type": "object",
+				"properties": {
+					"name": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/name"
+					},
+					"city": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/city.json#/$defs/city"
+					},
+					"rating": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/rating"
+					},
+					"review": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/review"
+					},
+					"remark": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/remark"
+					},
+					"with": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/with"
+					},
+					"date_utcz": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_utcz"
+					},
+					"date_dmy": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_dmy"
+					},
+					"date_timezone": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_timezone"
+					}
+				},
+				"required": [
+					"name",
+					"rating",
+					"review",
+					"date_utcz",
+					"date_dmy",
+					"date_utcz_timestamp"
+				],
+				"additionalProperties": false
+			}
+		}
+	},
+	"required": ["items"],
+	"additionalProperties": false
+}

@@ -1,0 +1,21 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$defs": {
+		"city": {
+			"description": "A valid city name",
+			"type": "string",
+			"enum": [
+				"Tel-Aviv",
+				"Moscow",
+				"Jerusalem"
+			]
+		},
+		"cities": {
+			"description": "A collection of cities",
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/city"
+			}
+		}
+	}
+}
