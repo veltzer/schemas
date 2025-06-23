@@ -7,26 +7,21 @@
 			"description": "A device",
 			"type": "string",
 			"enum": [
-				"cellcom_tv",
-				"desktop",
-				"desktop computer",
-				"device at location",
-				"harddrive",
-				"home tv",
-				"laptop",
-				"Laptop from twiggle",
-				"netflix",
-				"partner TV",
-				"Partner VOD",
-				"Prime",
-				"PrimeTV",
-				"primevideo",
+				"Device at location",
+
+				"Netflix",
+				"Partner TV",
+				"Prime TV",
+				"Cellcom TV",
+				"YES",
+
 				"Samsung S10",
 				"Samsung S21",
 				"Samsung S7",
 				"Sansa Clip 2",
-				"YES",
-				"YES VOD"
+				"Home TV",
+				"Desktop",
+				"Laptop"
 			]
 		},
 		"devices": {
