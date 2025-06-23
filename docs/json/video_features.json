@@ -37,7 +37,7 @@
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/review"
 					},
 					"with": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/with"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/person.json#/$defs/with"
 					}
 				},
 				"required": [

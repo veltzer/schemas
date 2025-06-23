@@ -34,7 +34,7 @@
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/url"
 					},
 					"with": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/with"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/person.json#/$defs/with"
 					},
 					"date_utcz": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_utcz"

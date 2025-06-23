@@ -37,10 +37,10 @@
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_timezone"
 					},
 					"with": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/with"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/person.json#/$defs/with"
 					},
 					"lecturers": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/lecturers"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/person.json#/$defs/lecturers"
 					},
 					"rating": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/rating"

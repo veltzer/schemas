@@ -89,23 +89,13 @@
 			"$comment": "This field is an 'alias' that must conform to the exact same rules",
 			"$ref": "#/$defs/date_timezone"
 		},
+		"duration": {
+			"description": "Duration of something",
+			"type": "string"
+		},
 		"review": {
 			"description": "What review did I give the movie",
 			"type": "string"
-		},
-		"with": {
-			"description": "Who did I see it with",
-			"type": "array",
-			"items": {
-				"type": "string"
-			}
-		},
-		"lecturers": {
-			"description": "List of lecturers",
-			"type": "array",
-			"items": {
-				"type": "string"
-			}
 		},
 		"name": {
 			"description": "Name of the movie",
@@ -115,16 +105,8 @@
 			"description": "Description of something",
 			"type": "string"
 		},
-		"duration": {
-			"description": "Duration of something",
-			"type": "string"
-		},
 		"remark": {
 			"description": "Remark about something",
-			"type": "string"
-		},
-		"location": {
-			"description": "Where did I see the movie",
 			"type": "string"
 		},
 		"imdb_id": {
@@ -139,25 +121,17 @@
 			"description": "What seasons did I see",
 			"type": "array",
 			"items": {
-				"type": "integer"
+				"type": "integer",
+				"minimum": 1
 			}
 		},
 		"seasons_not_seen": {
 			"description": "What seasons didnt I see",
 			"type": "array",
 			"items": {
-				"type": "integer"
+				"type": "integer",
+				"minimum": 1
 			}
-		},
-		"course_provider": {
-			"description": "provider of the course",
-			"type": "string",
-			"enum": [
-				"Coursera",
-				"MySQLAB",
-				"AWS",
-				"Sun Microsystems"
-			]
 		}
 	}
 }

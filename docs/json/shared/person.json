@@ -56,6 +56,18 @@
 			"items": {
 				"$ref": "#/$defs/person"
 			}
+		},
+		"with": {
+			"$comment": "This field is an 'alias' that must conform to the exact same rules",
+			"$ref": "#/$defs/people"
+		},
+		"authors": {
+			"$comment": "This field is an 'alias' that must conform to the exact same rules",
+			"$ref": "#/$defs/people"
+		},
+		"lecturers": {
+			"$comment": "This field is an 'alias' that must conform to the exact same rules",
+			"$ref": "#/$defs/people"
 		}
 	}
 }

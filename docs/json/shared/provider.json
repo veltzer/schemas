@@ -1,0 +1,24 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "provider.json",
+	"description": "Provider of courses",
+	"$defs": {
+		"provider": {
+			"description": "A provider",
+			"type": "string",
+			"enum": [
+				"Coursera",
+				"MySQLAB",
+				"AWS",
+				"Sun Microsystems"
+			]
+		},
+		"providers": {
+			"description": "A collection of providers",
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/provider"
+			}
+		}
+	}
+}

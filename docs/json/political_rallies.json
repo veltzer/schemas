@@ -32,7 +32,7 @@
 						"$ref": "https://veltzer.github.io/schemas/json/shared/country.json#/$defs/country"
 					},
 					"with": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/with"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/person.json#/$defs/with"
 					},
 					"review": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/review"
