@@ -7,7 +7,12 @@
 			"description": "A location",
 			"type": "string",
 			"enum": [
-				"Home"
+				"Home",
+				"Seminar Hakibutzim",
+				"Michlelet Tel-Aviv Yafo",
+				"Beit hakibutz hameuhad, Leonardo Da Vinci, Tel-Aviv",
+				"TalkHouse in TelAviv port",
+				"Twiggle offices at Even-Gvirol 2"
 			]
 		},
 		"locations": {
