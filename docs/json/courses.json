@@ -15,11 +15,11 @@
 					"name": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/name"
 					},
-					"course_provider": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/course_provider"
+					"provider": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/provider.json#/$defs/provider"
 					}
 				},
-				"required": ["name", "course_provider" ],
+				"required": ["name", "provider" ],
 				"additionalProperties": false
 			}
 		}
