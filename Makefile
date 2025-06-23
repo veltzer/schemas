@@ -9,6 +9,8 @@ DO_ALLDEP:=1
 DO_CHECK_JSON:=1
 # do you want yaml checking?
 DO_CHECK_YAML:=1
+# do you want to check the javascript code?
+DO_JS_CHECK:=1
 
 ########
 # code #
@@ -17,6 +19,8 @@ JSON:=$(shell find docs/json -type f -and -name "*.json")
 JSON_CHECK:=$(addprefix out/check/,$(addsuffix .stamp, $(JSON)))
 YAML:=$(shell find docs/yaml -type f -and -name "*.yaml")
 YAML_CHECK:=$(addprefix out/check/,$(addsuffix .stamp, $(YAML)))
+HTML_SRC:=$(shell find docs -type f -and -name "*.html")
+HTML_CHECK:=$(addprefix out/, $(addsuffix .check, $(basename $(HTML_SRC))))
 
 # silent stuff
 ifeq ($(DO_MKDBG),1)
@@ -35,6 +39,10 @@ ifeq ($(DO_CHECK_YAML),1)
 ALL+=$(YAML_CHECK)
 endif # DO_CHECK_YAML
 
+ifeq ($(DO_JS_CHECK),1)
+ALL+=$(HTML_CHECK)
+endif # DO_JS_CHECK
+
 #########
 # rules #
 #########
@@ -49,6 +57,8 @@ debug:
 	$(info JSON_CHECK is $(JSON_CHECK))
 	$(info YAML is $(YAML))
 	$(info YAML_JSON is $(YAML_JSON))
+	$(info HTML_SRC is $(HTML_SRC))
+	$(info HTML_CHECK is $(HTML_CHECK))
 
 .PHONY: clean
 clean:
@@ -71,6 +81,10 @@ $(JSON_CHECK): out/check/%.stamp: %
 $(YAML_CHECK): out/check/%.stamp: %
 	$(info doing [$@])
 	$(Q)pycmdtools validate_yaml $<
+	$(Q)pymakehelper touch_mkdir $@
+$(HTML_CHECK): out/%.check: %.html .jshintrc
+	$(info doing [$@])
+	$(Q)node_modules/.bin/jshint --extract=auto $<
 	$(Q)pymakehelper touch_mkdir $@
 
 # $(JSON_VALIDATE): out/validate/%.stamp: %
