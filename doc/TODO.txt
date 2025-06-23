@@ -1,3 +1,6 @@
 - get ridd of the makefile and make pydmt the only builder for this repo.
+- check the html and js files using jshint.
+
+DONE
 - make pydmt check that my schemas are ok.
 	(schema validation and not only json validation).
