@@ -8,6 +8,8 @@
 			"type": "string",
 			"enum": [
 				"Home",
+				"Mothers house",
+
 				"Seminar Hakibutzim",
 				"Michlelet Tel-Aviv Yafo",
 				"Beit Hakibutz Hameuhad, Leonardo Da Vinci, Tel-Aviv",
