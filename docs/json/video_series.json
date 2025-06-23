@@ -20,7 +20,7 @@
 						"$ref": "https://veltzer.github.io/schemas/json/shared/device.json#/$defs/device"
 					},
 					"location": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/location"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/location.json#/$defs/location"
 					},
 					"date_utcz": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_utcz"

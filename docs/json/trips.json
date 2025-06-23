@@ -13,7 +13,7 @@
 				"type": "object",
 				"properties": {
 					"location": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/location"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/location.json#/$defs/location"
 					},
 					"country": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/country.json#/$defs/country"

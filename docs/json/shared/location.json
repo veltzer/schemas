@@ -1,0 +1,21 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "location.json",
+	"description": "Provider of courses",
+	"$defs": {
+		"location": {
+			"description": "A location",
+			"type": "string",
+			"enum": [
+				"Home"
+			]
+		},
+		"locations": {
+			"description": "A collection of locations",
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/location"
+			}
+		}
+	}
+}

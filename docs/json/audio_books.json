@@ -31,7 +31,7 @@
 						"$ref": "https://veltzer.github.io/schemas/json/shared/device.json#/$defs/device"
 					},
 					"location": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/location"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/location.json#/$defs/location"
 					},
 					"rating": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/rating"

@@ -19,7 +19,7 @@
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/imdb_id"
 					},
 					"location": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/location"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/location.json#/$defs/location"
 					},
 					"device": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/device.json#/$defs/device"
