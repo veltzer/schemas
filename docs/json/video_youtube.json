@@ -52,7 +52,9 @@
 					"date_utcz",
 					"date_timezone",
 					"review",
-					"rating"
+					"rating",
+					"device",
+					"location"
 				],
 				"additionalProperties": false
 			}

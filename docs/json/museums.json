@@ -54,8 +54,15 @@
 				],
 				"propertyOrdering": [
 					"name",
+					"city",
 					"rating",
 					"review",
+					"date_utcz",
+					"date_dmy",
+					"date_timezone",
+					"remark",
+					"tickets",
+					"url",
 					"with"
 				],
 				"additionalProperties": false

@@ -67,7 +67,8 @@
 					"seasons_seen",
 					"seasons_not_seen",
 					"rating",
-					"review"
+					"review",
+					"with"
 				],
 				"additionalProperties": false
 			}
