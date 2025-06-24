@@ -50,6 +50,12 @@
 					"duration_days",
 					"with"
 				],
+				"oneOf": [
+					{ "required": ["date_utcz"] },
+					{ "required": ["date_y"] },
+					{ "required": ["date_my"] },
+					{ "required": ["date_dmy"] }
+				],
 				"propertyOrdering": [
 					"where",
 					"countries",
