@@ -71,7 +71,7 @@ clean_hard:
 ############
 # patterns #
 ############
-$(JSON_CHECK): out/check/%.stamp: %
+$(JSON_CHECK): out/check/%.stamp: % scripts/validate_schema.py
 	$(info doing [$@])
 	$(Q)pymakehelper only_print_on_error python -m json.tool $<
 	$(Q)pymakehelper only_print_on_error check-jsonschema --schemafile $$(yq -r '.["$$schema"]' $<)  $<
