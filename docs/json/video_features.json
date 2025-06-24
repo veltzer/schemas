@@ -54,10 +54,10 @@
 				"propertyOrdering": [
 					"name",
 					"imdb_id",
-					"location",
-					"device",
 					"date_utcz",
 					"date_timezone",
+					"location",
+					"device",
 					"rating",
 					"review",
 					"with"
