@@ -24,14 +24,17 @@
 					"date_started_utcz": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_utcz"
 					},
+					"date_ended_utcz": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_utcz"
+					},
 					"date_timezone": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_timezone"
 					},
-					"device": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/device.json#/$defs/device"
-					},
 					"location": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/location.json#/$defs/location"
+					},
+					"device": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/device.json#/$defs/device"
 					},
 					"rating": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/rating"
@@ -53,8 +56,15 @@
 				"propertyOrdering": [
 					"name",
 					"authors",
+					"date_utcz",
+					"date_started_utcz",
+					"date_ended_utcz",
+					"date_timezone",
 					"location",
-					"device"
+					"device",
+					"rating",
+					"review",
+					"progress"
 				],
 				"additionalProperties": false
 			}
