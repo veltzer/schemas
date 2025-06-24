@@ -7,11 +7,14 @@
 			"description": "A person",
 			"type": "string",
 			"enum": [
+				"---authors",
+				"Frank Herbert",
 				"Aristotle",
 				"Plato",
 				"Ayaan Hirsi Ali",
 				"Sam Harris",
-				
+
+				"---lecturers",
 				"Allan J. Lichtman",
 				"Allen C. Guelzo",
 				"Andrew C. Fix",
@@ -47,8 +50,7 @@
 				"Timothy Johnson",
 				"William W. Cook",
 
-				"Frank Herbert",
-
+				"---lecturers",
 				"Prof. Akiva Or",
 				"Michael Rabin",
 				"Dani Gutvein",
@@ -61,18 +63,46 @@
 				"Jeremy Fogel",
 				"Uri Yanover",
 
+				"---family",
+				"Aviya Veltzer",
 				"Doron Veltzer",
+				"Reut Shaer",
+				"Paz Veltzer",
+				"Miriam Veltzer",
+
+				"---friends",
 				"Boaz Yachin",
 				"David Alexander",
 				"Ofir Zwebner",
 				"Shay Sarid",
-				"Paz Veltzer",
-				"Aviya Veltzer",
-				"Reut Shaer",
-				"Miriam Veltzer",
+				"Galit Masa",
+				"Marmir",
 
+				"---girlfriends",
 				"Ada Skleirova",
-				"Irina Arkhipova"
+				"Irina Arkhipova",
+				"Natalia Kulyk",
+
+				"---aquaintences",
+				"Avi Telyas",
+				"Barak Levinson",
+				"Collin Brady",
+				"Galit Masas friend Shimrit",
+				"Hadas Lahav",
+				"Halit Lichtenzon",
+				"Halit Lichtenzons friend",
+				"Marmirs english friend Janet",
+				"Omer Mussafi",
+				"Rica Gonen",
+				"Orit Wasserman",
+				"Orit Wassermans friend Sharon from the army",
+				"Orit Wassermans former boyfried Amir",
+				"Shlomi Noach",
+				"Shlomi Noachs friend Assi",
+				"Shlomi Noachs friend Nati",
+				"Tsemach Mizrahi",
+				"Yuval Davidor",
+				"Yuval Davidors daugher"
 			]
 		},
 		"people": {
