@@ -42,11 +42,13 @@
 			"enum": [
 				"Asia/Tokyo",
 				"Asia/Jerusalem",
+				"Asia/Shanghai",
 				"America/New_York",
 				"America/Los_Angeles",
 				"Europe/London",
 				"Europe/Paris",
 				"Europe/Moscow",
+				"Europe/Bucharest",
 				"Europe/Kiev",
 				"Europe/Madrid",
 				"Europe/Zurich",
