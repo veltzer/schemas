@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"title": "common.json",
-	"description": "Common elements used all over, put stuff here before it gets it's own file",
+	"title": "dates.json",
+	"description": "Date related elements",
 	"$defs": {
 		"date_utcz": {
 			"description": "On what date did I see the movie (must be in UTCZ format)",

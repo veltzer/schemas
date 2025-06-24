@@ -23,10 +23,6 @@
 			"type": "string",
 			"format": "uri"
 		},
-		"duration": {
-			"description": "Duration of something",
-			"type": "string"
-		},
 		"review": {
 			"description": "What review did I give the movie",
 			"type": "string"

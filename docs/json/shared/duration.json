@@ -1,0 +1,12 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "duration.json",
+	"description": "All stuff which is about time duration",
+	"$defs": {
+		"duration_days": {
+			"description": "Duration of something",
+			"type": "integer",
+			"minimum": 1
+		}
+	}
+}
