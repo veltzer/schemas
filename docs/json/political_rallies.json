@@ -43,14 +43,20 @@
 					"location",
 					"country",
 					"with",
-					"review"
+					"review",
+					"date_timezone"
+				],
+				"oneOf": [
+					{ "required": ["date_utcz"] },
+					{ "required": ["date_dmy"] }
 				],
 				"propertyOrdering": [
 					"description",
 					"location",
 					"country",
 					"with",
-					"review"
+					"review",
+					"date_timezone"
 				],
 				"additionalProperties": false
 			}

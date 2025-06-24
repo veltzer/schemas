@@ -56,7 +56,13 @@
 					"location",
 					"country",
 					"rating",
-					"review"
+					"review",
+					"date_timezone"
+				],
+				"oneOf": [
+					{ "required": ["date_utcz"] },
+					{ "required": ["date_y"] },
+					{ "required": ["date_my"] }
 				],
 				"propertyOrdering": [
 					"name",
@@ -65,7 +71,8 @@
 					"location",
 					"country",
 					"rating",
-					"review"
+					"review",
+					"date_timezone"
 				],
 				"additionalProperties": false
 			}
