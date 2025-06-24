@@ -59,13 +59,15 @@
 				],
 				"propertyOrdering": [
 					"name",
+					"device",
+					"date_utcz",
+					"date_timezone",
 					"imdb_id",
 					"location",
-					"device",
+					"seasons_seen",
+					"seasons_not_seen",
 					"rating",
-					"review",
-					"date_utcz",
-					"date_timezone"
+					"review"
 				],
 				"additionalProperties": false
 			}
