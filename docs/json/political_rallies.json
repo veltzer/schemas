@@ -53,10 +53,12 @@
 				"propertyOrdering": [
 					"description",
 					"location",
+					"date_utcz",
+					"date_dmy",
+					"date_timezone",
 					"country",
 					"with",
-					"review",
-					"date_timezone"
+					"review"
 				],
 				"additionalProperties": false
 			}
