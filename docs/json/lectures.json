@@ -66,13 +66,17 @@
 				],
 				"propertyOrdering": [
 					"name",
+					"description",
 					"lecturers",
+					"date_utcx",
+					"date_y",
+					"date_my",
+					"date_timezone",
 					"with",
 					"location",
 					"country",
 					"rating",
-					"review",
-					"date_timezone"
+					"review"
 				],
 				"additionalProperties": false
 			}
