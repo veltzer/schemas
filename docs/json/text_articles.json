@@ -33,15 +33,23 @@
 						"description": "When did the reading take place",
 						"type": "string"
 					}
-				}
-			},
-			"required": [
-				"id",
-				"who",
-				"location",
-				"date"
-			],
-			"additionalProperties": false
+				},
+				"required": [
+					"id",
+					"url",
+					"file",
+					"location",
+					"date_utcz"
+				],
+				"propertyOrdering": [
+					"id",
+					"url",
+					"file",
+					"location",
+					"date_utcz"
+				],
+				"additionalProperties": false
+			}
 		}
 	},
 	"required": ["items"],
