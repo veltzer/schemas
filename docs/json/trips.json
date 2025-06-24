@@ -59,13 +59,13 @@
 				"propertyOrdering": [
 					"where",
 					"countries",
-					"duration_days",
-					"with",
 					"date_utcz",
 					"date_dmy",
 					"date_my",
 					"date_y",
 					"date_timezone",
+					"duration_days",
+					"with",
 					"remark"
 				],
 				"additionalProperties": false
