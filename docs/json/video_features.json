@@ -25,10 +25,10 @@
 						"$ref": "https://veltzer.github.io/schemas/json/shared/device.json#/$defs/device"
 					},
 					"date_utcz": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_utcz"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_utcz"
 					},
 					"date_timezone": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_timezone"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_timezone"
 					},
 					"rating": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/rating"
@@ -41,6 +41,17 @@
 					}
 				},
 				"required": [
+					"name",
+					"imdb_id",
+					"location",
+					"device",
+					"date_utcz",
+					"date_timezone",
+					"rating",
+					"review",
+					"with"
+				],
+				"propertyOrdering": [
 					"name",
 					"imdb_id",
 					"location",

@@ -17,13 +17,13 @@
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/description"
 					},
 					"date_utcz": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_utcz"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_utcz"
 					},
 					"date_dmy": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_dmy"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_dmy"
 					},
 					"date_timezone": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_timezone"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_timezone"
 					},
 					"location": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/location.json#/$defs/location"
@@ -39,6 +39,13 @@
 					}
 				},
 				"required": [
+					"description",
+					"location",
+					"country",
+					"with",
+					"review"
+				],
+				"propertyOrdering": [
 					"description",
 					"location",
 					"country",

@@ -37,16 +37,22 @@
 						"$ref": "https://veltzer.github.io/schemas/json/shared/person.json#/$defs/with"
 					},
 					"date_utcz": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_utcz"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_utcz"
 					},
 					"date_dmy": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_dmy"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_dmy"
 					},
 					"date_timezone": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_timezone"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_timezone"
 					}
 				},
 				"required": [
+					"name",
+					"rating",
+					"review",
+					"with"
+				],
+				"propertyOrdering": [
 					"name",
 					"rating",
 					"review",

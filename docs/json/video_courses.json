@@ -23,19 +23,28 @@
 						"$ref": "https://veltzer.github.io/schemas/json/shared/location.json#/$defs/location"
 					},
 					"date_utcz": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_utcz"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_utcz"
 					},
 					"date_timezone": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_timezone"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_timezone"
 					},
 					"rating": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/rating"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/rating"
 					},
 					"review": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/review"
 					}
 				},
 				"required": [
+					"name",
+					"device",
+					"location",
+					"date_utcz",
+					"date_timezone",
+					"rating",
+					"review"
+				],
+				"propertyOrdering": [
 					"name",
 					"device",
 					"location",

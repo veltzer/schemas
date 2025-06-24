@@ -25,16 +25,16 @@
 						"$ref": "https://veltzer.github.io/schemas/json/shared/country.json#/$defs/country"
 					},
 					"date_utcz": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_utcz"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_utcz"
 					},
 					"date_y": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_y"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_y"
 					},
 					"date_my": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_my"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_my"
 					},
 					"date_timezone": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_timezone"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_timezone"
 					},
 					"with": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/person.json#/$defs/with"
@@ -50,6 +50,15 @@
 					}
 				},
 				"required": [
+					"name",
+					"lecturers",
+					"with",
+					"location",
+					"country",
+					"rating",
+					"review"
+				],
+				"propertyOrdering": [
 					"name",
 					"lecturers",
 					"with",

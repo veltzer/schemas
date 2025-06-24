@@ -20,13 +20,19 @@
 						"type": "string"
 					},
 					"date_utcz": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_utcz"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_utcz"
 					},
 					"date_timezone": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_timezone"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_timezone"
 					}
 				},
 				"required": [
+					"person",
+					"item",
+					"date_utcz",
+					"date_timezone"
+				],
+				"propertyOrdering": [
 					"person",
 					"item",
 					"date_utcz",
