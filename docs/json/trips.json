@@ -47,14 +47,12 @@
 				"required": [
 					"where",
 					"countries",
-					"date_timezone",
 					"duration_days",
 					"with"
 				],
 				"propertyOrdering": [
 					"where",
 					"countries",
-					"date_timezone",
 					"duration_days",
 					"with"
 				],
