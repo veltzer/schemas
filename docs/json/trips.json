@@ -12,11 +12,9 @@
 			"items": {
 				"type": "object",
 				"properties": {
-					"location": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/location.json#/$defs/location"
-					},
-					"country": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/country.json#/$defs/country"
+					"where": {
+						"description": "where did I go",
+						"type": "string"
 					},
 					"countries": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/country.json#/$defs/countries"
@@ -33,30 +31,24 @@
 					"date_dmy": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_dmy"
 					},
-					"date_utcz_timezone": {
+					"date_timezone": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_utcz_timezone"
 					},
-					"date_y_timezone": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_y_timezone"
-					},
-					"date_my_timezone": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_my_timezone"
-					},
-					"date_dmy_timezone": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/date_dmy_timezone"
-					},
-					"with": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/person.json#/$defs/with"
+					"duration_days": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/duration.json#/$defs/duration_days"
 					},
 					"remark": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/remark"
 					},
-					"duration": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/duration"
+					"with": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/person.json#/$defs/with"
 					}
 				},
 				"required": [
-					"location",
+					"where",
+					"countries",
+					"date_timezone",
+					"duration_days",
 					"with"
 				],
 				"additionalProperties": false
