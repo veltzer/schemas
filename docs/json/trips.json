@@ -65,8 +65,8 @@
 					"date_y",
 					"date_timezone",
 					"duration_days",
-					"with",
-					"remark"
+					"remark",
+					"with"
 				],
 				"additionalProperties": false
 			}
