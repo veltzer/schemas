@@ -62,7 +62,7 @@ def process_schema_file(file_path):
     """
     print(f"--- Validating Schema: '{file_path}' ---")
     try:
-        with open(file_path, 'r', encoding='utf8') as f:
+        with open(file_path, encoding='utf8') as f:
             schema = json.load(f)
     except json.JSONDecodeError as e:
         print(f"Error: Invalid JSON in file '{file_path}'.")
