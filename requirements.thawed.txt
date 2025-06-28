@@ -1,6 +1,6 @@
 # THIS IS AN AUTO-GENERATED FILE. DO NOT EDIT!
-pycmdtools
-pymakehelper
-pydmt
 check-jsonschema
+pycmdtools
+pydmt
+pymakehelper
 yq
