@@ -59,10 +59,10 @@
 				],
 				"propertyOrdering": [
 					"name",
+					"imdb_id",
 					"device",
 					"date_utcz",
 					"date_timezone",
-					"imdb_id",
 					"location",
 					"seasons_seen",
 					"seasons_not_seen",
