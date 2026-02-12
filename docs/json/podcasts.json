@@ -1,0 +1,89 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "podcasts.json",
+	"description": "Podcasts that I listened to",
+	"type": "object",
+	"properties": {
+		"$schema": {
+			"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/$schema"
+		},
+		"items": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"name": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/name"
+					},
+					"url": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/url"
+					},
+					"chapters": {
+						"description": "Chapters/episodes of the podcast that I listened to",
+						"type": "array",
+						"items": {
+							"type": "object",
+							"properties": {
+								"name": {
+									"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/name"
+								},
+								"date_utcz": {
+									"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_utcz"
+								},
+								"date_timezone": {
+									"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_timezone"
+								},
+								"location": {
+									"$ref": "https://veltzer.github.io/schemas/json/shared/location.json#/$defs/location"
+								},
+								"device": {
+									"$ref": "https://veltzer.github.io/schemas/json/shared/device.json#/$defs/device"
+								},
+								"rating": {
+									"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/rating"
+								},
+								"review": {
+									"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/review"
+								}
+							},
+							"required": [
+								"name",
+								"device"
+							],
+							"propertyOrdering": [
+								"name",
+								"date_utcz",
+								"date_timezone",
+								"location",
+								"device",
+								"rating",
+								"review"
+							],
+							"additionalProperties": false
+						}
+					},
+					"rating": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/rating"
+					},
+					"review": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/review"
+					}
+				},
+				"required": [
+					"name",
+					"chapters"
+				],
+				"propertyOrdering": [
+					"name",
+					"url",
+					"chapters",
+					"rating",
+					"review"
+				],
+				"additionalProperties": false
+			}
+		}
+	},
+	"required": ["items"],
+	"additionalProperties": false
+}
