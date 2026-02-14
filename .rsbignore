@@ -1,0 +1,10 @@
+# .rsbignore - Exclude files from rsb processing
+# Uses .gitignore syntax (glob patterns, one per line)
+# Lines starting with # are comments
+#
+# Examples:
+# /build/           # Exclude a top-level directory
+# *.generated.*     # Exclude generated files by pattern
+# /src/vendor/**    # Exclude vendored source code
+# /experiments/     # Exclude experimental code
+# *.bak             # Exclude backup files

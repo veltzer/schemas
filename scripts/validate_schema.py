@@ -22,7 +22,6 @@ def validate_schema_object(schema_part, path="root"):
     # We only care about objects that define both properties and propertyOrdering.
     if isinstance(schema_part, dict) and schema_part.get("type") == "object":
         if "properties" in schema_part and "propertyOrdering" in schema_part:
-            
             properties_keys = set(schema_part["properties"].keys())
             ordering_keys = set(schema_part["propertyOrdering"])
 
@@ -30,7 +29,6 @@ def validate_schema_object(schema_part, path="root"):
             if properties_keys != ordering_keys:
                 missing_in_ordering = properties_keys - ordering_keys
                 extra_in_ordering = ordering_keys - properties_keys
-                
                 error_message = f"Mismatch found at path: '{path}'"
                 if missing_in_ordering:
                     error_message += f"\n  - Keys missing from 'propertyOrdering': {sorted(list(missing_in_ordering))}"
@@ -47,7 +45,6 @@ def validate_schema_object(schema_part, path="root"):
         # Recurse into array items
         if "items" in schema_part:
             errors.extend(validate_schema_object(schema_part["items"], f"{path}.items"))
-            
         # Recurse into combiners (allOf, anyOf, oneOf)
         for combiner in ["allOf", "anyOf", "oneOf"]:
             if combiner in schema_part:
@@ -73,13 +70,11 @@ def process_schema_file(file_path):
         return False
 
     validation_errors = validate_schema_object(schema)
-    
     if validation_errors:
         print("Validation FAILED with the following errors:")
         for error in validation_errors:
             print(error)
         return False
-    
     print("Validation successful: 'propertyOrdering' matches 'properties' throughout the schema.")
     return True
 
@@ -98,7 +93,6 @@ def main():
         if not process_schema_file(schema_file):
             overall_success = False
         print("-" * (len(schema_file) + 25) + "\n")
-    
     if not overall_success:
         print("One or more schemas failed validation.")
         sys.exit(1)
