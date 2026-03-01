@@ -1,2 +1,11 @@
 [processor.make]
 exclude_files = ["Makefile"]
+
+[processor.jsonlint]
+enabled = false
+
+[processor.mdl]
+enabled = false
+
+[processor.markdownlint]
+enabled = false
