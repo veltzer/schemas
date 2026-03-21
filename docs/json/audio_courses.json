@@ -45,6 +45,10 @@
 					"progress": {
 						"description": "What progress am I making",
 						"type": "string"
+					},
+					"great_courses_id": {
+						"description": "The Great Courses / Wondrium course ID",
+						"type": "number"
 					}
 				},
 				"required": [
@@ -63,7 +67,8 @@
 					"location",
 					"progress",
 					"rating",
-					"review"
+					"review",
+					"great_courses_id"
 				],
 				"additionalProperties": false
 			}
