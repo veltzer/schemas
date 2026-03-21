@@ -53,6 +53,10 @@
           "great_courses_slug": {
             "description": "The Great Courses / Wondrium course SLUG",
             "type": "string"
+          },
+          "audible_asin": {
+            "description": "Audible ASIN identifier",
+            "type": "string"
           }
         },
         "required": [
@@ -73,7 +77,8 @@
           "rating",
           "review",
           "great_courses_id",
-          "great_courses_slug"
+          "great_courses_slug",
+          "audible_asin"
         ],
         "additionalProperties": false
       }
