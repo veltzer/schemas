@@ -57,6 +57,10 @@
           "audible_asin": {
             "description": "Audible ASIN identifier",
             "type": "string"
+          },
+          "internal_id": {
+            "description": "Internal ID for courses without external identifiers",
+            "type": "number"
           }
         },
         "required": [
@@ -78,7 +82,8 @@
           "review",
           "great_courses_id",
           "great_courses_slug",
-          "audible_asin"
+          "audible_asin",
+          "internal_id"
         ],
         "additionalProperties": false
       }
