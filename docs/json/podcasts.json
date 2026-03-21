@@ -67,6 +67,10 @@
 					},
 					"review": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/review"
+					},
+					"internal_id": {
+						"description": "Internal unique ID for each podcast",
+						"type": "number"
 					}
 				},
 				"required": [
@@ -78,7 +82,8 @@
 					"url",
 					"chapters",
 					"rating",
-					"review"
+					"review",
+					"internal_id"
 				],
 				"additionalProperties": false
 			}
