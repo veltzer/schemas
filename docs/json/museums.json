@@ -44,6 +44,10 @@
 					},
 					"date_timezone": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_timezone"
+					},
+					"internal_id": {
+						"description": "Internal unique ID for each museum visit",
+						"type": "number"
 					}
 				},
 				"required": [
@@ -63,7 +67,8 @@
 					"with",
 					"remark",
 					"tickets",
-					"url"
+					"url",
+					"internal_id"
 				],
 				"additionalProperties": false
 			}
