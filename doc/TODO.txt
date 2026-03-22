@@ -4,3 +4,7 @@ DONE
 - check the html and js files using jshint.
 - make pydmt check that my schemas are ok.
 	(schema validation and not only json validation).
+- renamed date_dmy to date_ymd across all schemas (shared/dates.json, museums.json,
+  trips.json, political_rallies.json). Format changed from DD-MM-YYYY to YYYY-MM-DD
+  for string-sortability and ISO 8601 consistency with date_utcz fields.
+  The corresponding data files in ../data were also updated.
