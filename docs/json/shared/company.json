@@ -11,7 +11,7 @@
 				"Google"
 			]
 		},
-		"countries": {
+		"companies": {
 			"description": "A collection of companies",
 			"type": "array",
 			"items": {

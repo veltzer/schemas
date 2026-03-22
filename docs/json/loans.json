@@ -13,7 +13,7 @@
 				"type": "object",
 				"properties": {
 					"person": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/country.json#/$defs/person"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/person.json#/$defs/person"
 					},
 					"item": {
 						"description": "What item was loaned",

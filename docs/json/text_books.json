@@ -24,15 +24,15 @@
 					"review": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/review"
 					}
-				}
-			},
-			"required": [
-				"name",
-				"authors",
-				"rating",
-				"review"
-			],
-			"additionalProperties": false
+				},
+				"required": [
+					"name",
+					"authors",
+					"rating",
+					"review"
+				],
+				"additionalProperties": false
+			}
 		}
 	},
 	"required": ["items"],

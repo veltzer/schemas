@@ -29,7 +29,7 @@
 						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_timezone"
 					},
 					"rating": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/rating"
+						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/rating"
 					},
 					"review": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/review"

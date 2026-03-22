@@ -8,22 +8,28 @@
 			"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/$schema"
 		},
 		"items": {
-			"type": "object",
-			"properties": {
-				"recommended_by": {
-					"description": "Who recommended the movie",
-					"type": "string"
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"recommended_by": {
+						"description": "Who recommended the movie",
+						"type": "string"
+					},
+					"imdb_id": {
+						"description": "The imdb id of the movie",
+						"type": "string"
+					},
+					"genre": {
+						"description": "What is the genre of the movie",
+						"type": "string"
+					}
 				},
-				"imdb_id": {
-					"description": "The imdb id of the movie",
-					"type": "string"
-				},
-				"genre": {
-					"description": "What is the genre of the movie",
-					"type": "string"
-				}
-			},
-			"required": ["recommended_by", "imdb_id", "genre"]
+				"required": ["recommended_by", "imdb_id", "genre"],
+				"additionalProperties": false
+			}
 		}
-	}
+	},
+	"required": ["items"],
+	"additionalProperties": false
 }
