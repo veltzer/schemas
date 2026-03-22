@@ -1,39 +1,37 @@
 {
-	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"title": "location.json",
-	"description": "Provider of courses",
-	"$defs": {
-		"location": {
-			"description": "A location",
-			"type": "string",
-			"enum": [
-				"Home",
-				"Night Walks",
-				"Gym",
-				"Bus",
-				"Car",
-				"Mothers house",
-				"Brothers house",
-				"Cinemateque, Holon",
-
-				"Airbnb, Moscow",
-				"Podol Plaza hotel, Kiev",
-				"Airbnb, Chishinau",
-
-				"Seminar Hakibutzim",
-				"Michlelet Tel-Aviv Yafo",
-				"Beit Hakibutz Hameuhad, Leonardo Da Vinci, Tel-Aviv",
-				"TalkHouse in TelAviv port",
-				"Twiggle offices at Even-Gvirol 2",
-				"Kikar Rabin"
-			]
-		},
-		"locations": {
-			"description": "A collection of locations",
-			"type": "array",
-			"items": {
-				"$ref": "#/$defs/location"
-			}
-		}
-	}
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "location.json",
+  "description": "Provider of courses",
+  "$defs": {
+    "location": {
+      "description": "A location",
+      "type": "string",
+      "enum": [
+        "Home",
+        "Night Walks",
+        "Gym",
+        "Bus",
+        "Car",
+        "Mothers house",
+        "Brothers house",
+        "Cinemateque, Holon",
+        "Airbnb, Moscow",
+        "Podol Plaza hotel, Kiev",
+        "Airbnb, Chishinau",
+        "Seminar Hakibutzim",
+        "Michlelet Tel-Aviv Yafo",
+        "Beit Hakibutz Hameuhad, Leonardo Da Vinci, Tel-Aviv",
+        "TalkHouse in Tel Aviv port",
+        "Twiggle offices at Even-Gvirol 2",
+        "Kikar Rabin"
+      ]
+    },
+    "locations": {
+      "description": "A collection of locations",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/location"
+      }
+    }
+  }
 }
