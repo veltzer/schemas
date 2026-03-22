@@ -28,8 +28,8 @@
 					"date_my": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_my"
 					},
-					"date_dmy": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_dmy"
+					"date_ymd": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_ymd"
 					},
 					"date_timezone": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_utcz_timezone"
@@ -54,13 +54,13 @@
 					{ "required": ["date_utcz"] },
 					{ "required": ["date_y"] },
 					{ "required": ["date_my"] },
-					{ "required": ["date_dmy"] }
+					{ "required": ["date_ymd"] }
 				],
 				"propertyOrdering": [
 					"where",
 					"countries",
 					"date_utcz",
-					"date_dmy",
+					"date_ymd",
 					"date_my",
 					"date_y",
 					"date_timezone",

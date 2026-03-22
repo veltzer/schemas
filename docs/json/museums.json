@@ -39,8 +39,8 @@
 					"date_utcz": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_utcz"
 					},
-					"date_dmy": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_dmy"
+					"date_ymd": {
+						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_ymd"
 					},
 					"date_timezone": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_timezone"
@@ -59,7 +59,7 @@
 				"propertyOrdering": [
 					"name",
 					"date_utcz",
-					"date_dmy",
+					"date_ymd",
 					"date_timezone",
 					"city",
 					"rating",

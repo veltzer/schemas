@@ -9,13 +9,13 @@
 			"format": "date-time",
 			"pattern": "Z$"
 		},
-		"date_dmy": {
-			"description": "A date containing only DD-MM-YYYY format.",
+		"date_ymd": {
+			"description": "A date containing only YYYY-MM-DD format.",
 			"type": "string",
-			"pattern": "^\\d{2}-\\d{2}-\\d{4}$",
+			"pattern": "^\\d{4}-\\d{2}-\\d{2}$",
 			"examples": [
-				"15-10-2023",
-				"12-05-1999"
+				"2023-10-15",
+				"1999-05-12"
 			]
 		},
 		"date_my": {
@@ -68,7 +68,7 @@
 			"$comment": "This field is an 'alias' that must conform to the exact same rules",
 			"$ref": "#/$defs/date_timezone"
 		},
-		"date_dmy_timezone": {
+		"date_ymd_timezone": {
 			"$comment": "This field is an 'alias' that must conform to the exact same rules",
 			"$ref": "#/$defs/date_timezone"
 		}
