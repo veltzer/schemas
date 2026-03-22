@@ -48,6 +48,8 @@
 							},
 							"required": [
 								"name",
+								"date_utcz",
+								"date_timezone",
 								"device"
 							],
 							"propertyOrdering": [
