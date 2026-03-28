@@ -29,8 +29,50 @@
 						"items": {
 							"type": "object",
 							"properties": {
-								"name": {
-									"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/name"
+								"title": {
+									"description": "Episode title from the RSS feed",
+									"type": "string"
+								},
+								"description": {
+									"description": "Episode description from the RSS feed",
+									"type": "string"
+								},
+								"pubDate": {
+									"description": "Episode publication date from the RSS feed",
+									"type": "string"
+								},
+								"episode": {
+									"description": "Episode number from the RSS feed",
+									"type": ["integer", "null"]
+								},
+								"duration": {
+									"description": "Episode duration from the RSS feed (seconds or HH:MM:SS)",
+									"type": "string"
+								},
+								"episodeType": {
+									"description": "Episode type from the RSS feed (full, trailer, bonus)",
+									"type": "string",
+									"enum": ["full", "trailer", "bonus"]
+								},
+								"explicit": {
+									"description": "Whether the episode is explicit",
+									"type": "string"
+								},
+								"enclosure_url": {
+									"description": "URL to the episode audio file",
+									"type": "string"
+								},
+								"image": {
+									"description": "URL to the episode artwork",
+									"type": "string"
+								},
+								"author": {
+									"description": "Episode author from the RSS feed",
+									"type": "string"
+								},
+								"guid": {
+									"description": "Unique episode identifier from the RSS feed",
+									"type": "string"
 								},
 								"date_utcz": {
 									"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_utcz"
@@ -52,13 +94,23 @@
 								}
 							},
 							"required": [
-								"name",
+								"title",
 								"date_utcz",
 								"date_timezone",
 								"device"
 							],
 							"propertyOrdering": [
-								"name",
+								"title",
+								"description",
+								"pubDate",
+								"episode",
+								"duration",
+								"episodeType",
+								"explicit",
+								"enclosure_url",
+								"image",
+								"author",
+								"guid",
 								"date_utcz",
 								"date_timezone",
 								"location",
