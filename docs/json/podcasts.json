@@ -46,8 +46,8 @@
 									"type": ["integer", "null"]
 								},
 								"duration": {
-									"description": "Episode duration from the RSS feed (seconds or HH:MM:SS)",
-									"type": "string"
+									"description": "Episode duration in seconds",
+									"type": "integer"
 								},
 								"episodeType": {
 									"description": "Episode type from the RSS feed (full, trailer, bonus)",
