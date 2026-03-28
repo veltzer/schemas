@@ -18,6 +18,11 @@
 					"url": {
 						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/url"
 					},
+					"rss_feed": {
+						"description": "RSS feed URL for the podcast",
+						"type": "string",
+						"format": "uri"
+					},
 					"chapters": {
 						"description": "Chapters/episodes of the podcast that I listened to",
 						"type": "array",
@@ -82,6 +87,7 @@
 				"propertyOrdering": [
 					"name",
 					"url",
+					"rss_feed",
 					"chapters",
 					"rating",
 					"review",
