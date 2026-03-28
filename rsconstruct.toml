@@ -36,3 +36,6 @@ enabled = false
 
 [processor.standard]
 enabled = false
+
+[processor.npm]
+enabled = false
