@@ -6,9 +6,10 @@ Validates that in a given JSON schema, for every object that has a
 defined in the 'properties' object.
 """
 
-import sys
-import json
 import argparse
+import json
+import sys
+
 
 def validate_schema_object(schema_part, path="root"):
     """
@@ -20,21 +21,20 @@ def validate_schema_object(schema_part, path="root"):
 
     # --- Base Case: Perform validation on the current schema object ---
     # We only care about objects that define both properties and propertyOrdering.
-    if isinstance(schema_part, dict) and schema_part.get("type") == "object":
-        if "properties" in schema_part and "propertyOrdering" in schema_part:
-            properties_keys = set(schema_part["properties"].keys())
-            ordering_keys = set(schema_part["propertyOrdering"])
+    if isinstance(schema_part, dict) and schema_part.get("type") == "object" and "properties" in schema_part and "propertyOrdering" in schema_part:
+        properties_keys = set(schema_part["properties"].keys())
+        ordering_keys = set(schema_part["propertyOrdering"])
 
-            # Check if the sets of keys are identical.
-            if properties_keys != ordering_keys:
-                missing_in_ordering = properties_keys - ordering_keys
-                extra_in_ordering = ordering_keys - properties_keys
-                error_message = f"Mismatch found at path: '{path}'"
-                if missing_in_ordering:
-                    error_message += f"\n  - Keys missing from 'propertyOrdering': {sorted(list(missing_in_ordering))}"
-                if extra_in_ordering:
-                    error_message += f"\n  - Keys in 'propertyOrdering' but not in 'properties': {sorted(list(extra_in_ordering))}"
-                errors.append(error_message)
+        # Check if the sets of keys are identical.
+        if properties_keys != ordering_keys:
+            missing_in_ordering = properties_keys - ordering_keys
+            extra_in_ordering = ordering_keys - properties_keys
+            error_message = f"Mismatch found at path: '{path}'"
+            if missing_in_ordering:
+                error_message += f"\n  - Keys missing from 'propertyOrdering': {sorted(missing_in_ordering)}"
+            if extra_in_ordering:
+                error_message += f"\n  - Keys in 'propertyOrdering' but not in 'properties': {sorted(extra_in_ordering)}"
+            errors.append(error_message)
 
     # --- Recursive Step: Traverse into nested schema definitions ---
     if isinstance(schema_part, dict):
