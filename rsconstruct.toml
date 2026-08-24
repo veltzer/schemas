@@ -1,14 +1,5 @@
-# Canonical shared rsconstruct.toml — this file is IDENTICAL in every repo.
-#
-# Do not edit per-repo copies. Edit the canonical copy
-# (/home/mark/git/rsconstruct.canonical.toml) and sync it out.
-# Repo-specific configuration (dependencies, explicit generators, excludes,
-# one-off workarounds) lives in rsconstruct.local.toml, which rsconstruct
-# deep-merges over this file at load time.
-#
-# skip_missing_src_dirs makes this file a menu: a processor whose directories
-# don't exist in a given repo simply matches no files there. The directory
-# layout of each repo decides which checks run.
+# rsconstruct configuration for this repository — shared defaults plus
+# repo-specific config (merged from the former rsconstruct.local.toml).
 
 [build]
 
@@ -20,57 +11,35 @@
 
 [analyzer.python]
 
-# ─── templating ──────────────────────────────────────────────────────────────
-
-# Convention: tera configs are Lua (config/*.lua). dep_auto entries are
-# silently skipped where absent. Repos still on config/*.py keep a
-# dep_inputs override in their local overlay until converted.
-[processor.tera]
-src_dirs = ["tera.templates"]
-dep_auto = [
-	"config/project.lua",
-	"config/personal.lua",
-	"config/version.lua",
-	"config/github.lua",
-	"config/python.lua",
-	"config/shared.lua",
-]
-
 # ─── markdown ────────────────────────────────────────────────────────────────
 
 [processor.rumdl]
-src_dirs = ["src", "docs", "exercises", "notes", "marp"]
+src_dirs = ["docs"]
 
 [processor.zspell]
-src_dirs = ["src", "docs", "exercises", "notes", "marp", "syllabi", "out/generator"]
+src_dirs = ["docs"]
 
 # ─── python ──────────────────────────────────────────────────────────────────
 
 [processor.ruff]
-src_dirs = ["src", "scripts", "config", "tests", "exercises", "animations"]
+src_dirs = ["scripts", "config"]
 
 [processor.pylint]
-src_dirs = ["src", "scripts", "config", "tests", "exercises", "animations"]
+src_dirs = ["scripts", "config"]
 
 [processor.mypy]
-src_dirs = ["src", "scripts", "config", "tests", "exercises", "animations"]
-
-# [processor.requirements]
-# src_dirs = ["src", "scripts", "config", "tests", "animations"]
-
-[processor.pytest]
-src_dirs = ["tests"]
+src_dirs = ["scripts", "config"]
 
 # ─── shell ───────────────────────────────────────────────────────────────────
 
 [processor.shellcheck]
-src_dirs = ["scripts", "src", "misc", "exercises", "docs", "config"]
+src_dirs = ["scripts", "docs", "config"]
 args = ["--severity=error", "--shell=bash"]
 
 # ─── lua ─────────────────────────────────────────────────────────────────────
 
 [processor.luacheck]
-src_dirs = ["config", "print"]
+src_dirs = ["config"]
 
 # ─── toml / yaml / json ──────────────────────────────────────────────────────
 
@@ -78,42 +47,37 @@ src_dirs = ["config", "print"]
 src_dirs = ["."]
 
 [processor.iyamllint]
-src_dirs = ["yaml", "tracks"]
+src_dirs = ["docs/yaml"]
 
 [processor.ijsonlint]
-src_dirs = ["json"]
-
-# ─── web ─────────────────────────────────────────────────────────────────────
-
-[processor.stylelint]
-src_dirs = ["resources", "site-resources", "print"]
+src_dirs = ["docs/json"]
 
 [processor.htmlhint]
-src_dirs = ["src", "site-resources"]
-
-[processor.tidy]
-src_dirs = ["src", "blog"]
+src_dirs = ["docs"]
 
 [processor.eslint]
-src_dirs = ["site-resources", "shared", "config", "blog"]
+src_dirs = ["config"]
 args = ["-c", "config/eslint.config.js"]
 
-# ─── teaching content ────────────────────────────────────────────────────────
+# ─── merged from rsconstruct.local.toml ─────────────────────────────────────
 
-[processor.tags]
-src_dirs = ["syllabi", "out/generator"]
-required_fields = ["tags", "level", "category", "audience"]
-required_field_groups = [["duration_hours"], ["duration_hours_long", "duration_hours_short"]]
+# Runtime deps so CI installs what the code imports (pylint resolves them).
+[dependencies]
+pip = [
+    "pyclassifiers",
+    "check-jsonschema",
+]
 
-[processor.terms]
-src_dirs = ["syllabi", "out/generator"]
-
-[processor.pandoc.syllabi]
-src_dirs = ["syllabi"]
-formats = ["pdf", "html", "docx"]
-
-[processor.script.check_md]
-command = "scripts/check_md.py"
-src_extensions = [".md"]
-src_dirs = ["syllabi", "marp", "out/generator"]
-batch = true
+# The Makefile validated each docs/json/*.json two ways: check-jsonschema
+# against the metaschema named in the file's "$schema", and validate_schema.py
+# (propertyOrdering must match properties). The generator drives
+# scripts/check_json_schema.py, which runs both per file and writes a stamp on
+# success. (json.tool well-formedness is covered by ijsonlint; yaml by
+# iyamllint.)
+[processor.generator.jsonschema]
+command = "scripts/check_json_schema.py"
+src_dirs = ["docs/json"]
+src_extensions = [".json"]
+output_dir = "out/check"
+output_extension = "stamp"
+batch = false
