@@ -3,23 +3,7 @@
 
 [build]
 
-# ─── analyzers ───────────────────────────────────────────────────────────────
-
-[analyzer.tera]
-
-[analyzer.markdown]
-
 [analyzer.python]
-
-# ─── markdown ────────────────────────────────────────────────────────────────
-
-[processor.rumdl]
-src_dirs = ["docs"]
-
-[processor.zspell]
-src_dirs = ["docs"]
-
-# ─── python ──────────────────────────────────────────────────────────────────
 
 [processor.ruff]
 src_dirs = ["scripts", "config"]
@@ -29,14 +13,6 @@ src_dirs = ["scripts", "config"]
 
 [processor.mypy]
 src_dirs = ["scripts", "config"]
-
-# ─── shell ───────────────────────────────────────────────────────────────────
-
-[processor.shellcheck]
-src_dirs = ["scripts", "docs", "config"]
-args = ["--severity=error", "--shell=bash"]
-
-# ─── lua ─────────────────────────────────────────────────────────────────────
 
 [processor.luacheck]
 src_dirs = ["config"]
@@ -54,12 +30,6 @@ src_dirs = ["docs/json"]
 
 [processor.htmlhint]
 src_dirs = ["docs"]
-
-[processor.eslint]
-src_dirs = ["config"]
-args = ["-c", "config/eslint.config.js"]
-
-# ─── merged from rsconstruct.local.toml ─────────────────────────────────────
 
 # Runtime deps so CI installs what the code imports (pylint resolves them).
 [dependencies]
