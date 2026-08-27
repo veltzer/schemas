@@ -31,19 +31,6 @@ src_dirs = ["docs/json"]
 [processor.htmlhint]
 src_dirs = ["docs"]
 
-# Runtime deps so CI installs what the code imports (pylint resolves them).
-[dependencies]
-pip = [
-    "pyclassifiers",
-    "check-jsonschema",
-]
-
-# The Makefile validated each docs/json/*.json two ways: check-jsonschema
-# against the metaschema named in the file's "$schema", and validate_schema.py
-# (propertyOrdering must match properties). The generator drives
-# scripts/check_json_schema.py, which runs both per file and writes a stamp on
-# success. (json.tool well-formedness is covered by ijsonlint; yaml by
-# iyamllint.)
 [processor.generator.jsonschema]
 command = "scripts/check_json_schema.py"
 src_dirs = ["docs/json"]
