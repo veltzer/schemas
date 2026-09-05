@@ -21,11 +21,9 @@ src_dirs = ["config"]
 [processor.taplo]
 src_dirs = ["."]
 
-[processor.iyamllint]
-src_dirs = ["docs/yaml"]
-
 [processor.ijsonlint]
 src_dirs = ["docs/json"]
+src_files = [".ajv-config.json", "package.json"]
 
 [processor.htmlhint]
 src_dirs = ["docs"]
@@ -41,3 +39,18 @@ batch = false
 # lint the GitHub Actions workflow files with actionlint
 [processor.actionlint]
 src_dirs = [".github/workflows"]
+
+# ─── markdown ────────────────────────────────────────────────────────────────
+
+[processor.rumdl]
+src_files = ["README.md"]
+
+# ─── yaml ────────────────────────────────────────────────────────────────────
+
+[processor.yamllint]
+src_dirs = ["docs/yaml", "support"]
+
+# ─── xml / svg ───────────────────────────────────────────────────────────────
+
+[processor.xmllint]
+src_dirs = ["docs"]
