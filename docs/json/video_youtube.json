@@ -5,7 +5,7 @@
 	"type": "object",
 	"properties": {
 		"$schema": {
-			"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/$schema"
+			"$ref": "https://veltzer.github.io/web-schemas/json/shared/common.json#/$defs/$schema"
 		},
 		"items": {
 			"type": "array",
@@ -14,28 +14,28 @@
 				"type": "object",
 				"properties": {
 					"id": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/id"
+						"$ref": "https://veltzer.github.io/web-schemas/json/shared/common.json#/$defs/id"
 					},
 					"name": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/name"
+						"$ref": "https://veltzer.github.io/web-schemas/json/shared/common.json#/$defs/name"
 					},
 					"date_utcz": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_utcz"
+						"$ref": "https://veltzer.github.io/web-schemas/json/shared/dates.json#/$defs/date_utcz"
 					},
 					"date_timezone": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_timezone"
+						"$ref": "https://veltzer.github.io/web-schemas/json/shared/dates.json#/$defs/date_timezone"
 					},
 					"location": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/location.json#/$defs/location"
+						"$ref": "https://veltzer.github.io/web-schemas/json/shared/location.json#/$defs/location"
 					},
 					"device": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/device.json#/$defs/device"
+						"$ref": "https://veltzer.github.io/web-schemas/json/shared/device.json#/$defs/device"
 					},
 					"rating": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/rating"
+						"$ref": "https://veltzer.github.io/web-schemas/json/shared/common.json#/$defs/rating"
 					},
 					"review": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/review"
+						"$ref": "https://veltzer.github.io/web-schemas/json/shared/common.json#/$defs/review"
 					}
 				},
 				"required": [

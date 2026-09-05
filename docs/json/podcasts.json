@@ -5,7 +5,7 @@
 	"type": "object",
 	"properties": {
 		"$schema": {
-			"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/$schema"
+			"$ref": "https://veltzer.github.io/web-schemas/json/shared/common.json#/$defs/$schema"
 		},
 		"items": {
 			"type": "array",
@@ -13,10 +13,10 @@
 				"type": "object",
 				"properties": {
 					"name": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/name"
+						"$ref": "https://veltzer.github.io/web-schemas/json/shared/common.json#/$defs/name"
 					},
 					"url": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/url"
+						"$ref": "https://veltzer.github.io/web-schemas/json/shared/common.json#/$defs/url"
 					},
 					"rss_feed": {
 						"description": "RSS feed URL for the podcast",
@@ -75,22 +75,22 @@
 									"type": "string"
 								},
 								"date_utcz": {
-									"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_utcz"
+									"$ref": "https://veltzer.github.io/web-schemas/json/shared/dates.json#/$defs/date_utcz"
 								},
 								"date_timezone": {
-									"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_timezone"
+									"$ref": "https://veltzer.github.io/web-schemas/json/shared/dates.json#/$defs/date_timezone"
 								},
 								"location": {
-									"$ref": "https://veltzer.github.io/schemas/json/shared/location.json#/$defs/location"
+									"$ref": "https://veltzer.github.io/web-schemas/json/shared/location.json#/$defs/location"
 								},
 								"device": {
-									"$ref": "https://veltzer.github.io/schemas/json/shared/device.json#/$defs/device"
+									"$ref": "https://veltzer.github.io/web-schemas/json/shared/device.json#/$defs/device"
 								},
 								"rating": {
-									"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/rating"
+									"$ref": "https://veltzer.github.io/web-schemas/json/shared/common.json#/$defs/rating"
 								},
 								"review": {
-									"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/review"
+									"$ref": "https://veltzer.github.io/web-schemas/json/shared/common.json#/$defs/review"
 								}
 							},
 							"required": [
@@ -122,10 +122,10 @@
 						}
 					},
 					"rating": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/rating"
+						"$ref": "https://veltzer.github.io/web-schemas/json/shared/common.json#/$defs/rating"
 					},
 					"review": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/review"
+						"$ref": "https://veltzer.github.io/web-schemas/json/shared/common.json#/$defs/review"
 					},
 					"internal_id": {
 						"description": "Internal unique ID for each podcast",

@@ -5,7 +5,7 @@
 	"type": "object",
 	"properties": {
 		"$schema": {
-			"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/$schema"
+			"$ref": "https://veltzer.github.io/web-schemas/json/shared/common.json#/$defs/$schema"
 		},
 		"items": {
 			"type": "array",

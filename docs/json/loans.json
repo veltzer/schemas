@@ -5,7 +5,7 @@
 	"type": "object",
 	"properties": {
 		"$schema": {
-			"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/$schema"
+			"$ref": "https://veltzer.github.io/web-schemas/json/shared/common.json#/$defs/$schema"
 		},
 		"items": {
 			"type": "array",
@@ -13,17 +13,17 @@
 				"type": "object",
 				"properties": {
 					"person": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/person.json#/$defs/person"
+						"$ref": "https://veltzer.github.io/web-schemas/json/shared/person.json#/$defs/person"
 					},
 					"item": {
 						"description": "What item was loaned",
 						"type": "string"
 					},
 					"date_utcz": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_utcz"
+						"$ref": "https://veltzer.github.io/web-schemas/json/shared/dates.json#/$defs/date_utcz"
 					},
 					"date_timezone": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_timezone"
+						"$ref": "https://veltzer.github.io/web-schemas/json/shared/dates.json#/$defs/date_timezone"
 					}
 				},
 				"required": [

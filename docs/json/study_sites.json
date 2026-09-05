@@ -5,7 +5,7 @@
 	"type": "object",
 	"properties": {
 		"$schema": {
-			"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/$schema"
+			"$ref": "https://veltzer.github.io/web-schemas/json/shared/common.json#/$defs/$schema"
 		},
 		"items": {
 			"type": "array",
@@ -13,7 +13,7 @@
 				"type": "object",
 				"properties": {
 					"url": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/url"
+						"$ref": "https://veltzer.github.io/web-schemas/json/shared/common.json#/$defs/url"
 					}
 				},
 				"required": [

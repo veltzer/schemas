@@ -5,7 +5,7 @@
 	"type": "object",
 	"properties": {
 		"$schema": {
-			"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/$schema"
+			"$ref": "https://veltzer.github.io/web-schemas/json/shared/common.json#/$defs/$schema"
 		},
 		"items": {
 			"type": "array",
@@ -14,28 +14,28 @@
 				"type": "object",
 				"properties": {
 					"description": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/description"
+						"$ref": "https://veltzer.github.io/web-schemas/json/shared/common.json#/$defs/description"
 					},
 					"date_utcz": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_utcz"
+						"$ref": "https://veltzer.github.io/web-schemas/json/shared/dates.json#/$defs/date_utcz"
 					},
 					"date_ymd": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_ymd"
+						"$ref": "https://veltzer.github.io/web-schemas/json/shared/dates.json#/$defs/date_ymd"
 					},
 					"date_timezone": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/dates.json#/$defs/date_timezone"
+						"$ref": "https://veltzer.github.io/web-schemas/json/shared/dates.json#/$defs/date_timezone"
 					},
 					"location": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/location.json#/$defs/location"
+						"$ref": "https://veltzer.github.io/web-schemas/json/shared/location.json#/$defs/location"
 					},
 					"country": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/country.json#/$defs/country"
+						"$ref": "https://veltzer.github.io/web-schemas/json/shared/country.json#/$defs/country"
 					},
 					"with": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/person.json#/$defs/with"
+						"$ref": "https://veltzer.github.io/web-schemas/json/shared/person.json#/$defs/with"
 					},
 					"review": {
-						"$ref": "https://veltzer.github.io/schemas/json/shared/common.json#/$defs/review"
+						"$ref": "https://veltzer.github.io/web-schemas/json/shared/common.json#/$defs/review"
 					}
 				},
 				"required": [
