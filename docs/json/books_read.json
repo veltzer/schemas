@@ -74,7 +74,7 @@
 					"language": {
 						"description": "In which language was the book originally written",
 						"type": "string",
-						"enum": ["hebrew", "english"]
+						"enum": ["hebrew", "english", "french", "german", "russian", "greek", "czech", "portuguese", "unknown"]
 					},
 					"publisher": {
 						"description": "Who is the publisher",
@@ -138,11 +138,32 @@
 								"review": {
 									"description": "What review did I give the book",
 									"type": "string"
+								},
+								"undated": {
+									"description": "Marks a reading migrated from the old xml catalog, which recorded only a read count: the date, rating and review are not known",
+									"type": "boolean",
+									"const": true
 								}
 							},
-							"required": ["language", "date", "timezone", "rating", "review"],
+							"required": ["language"],
+							"oneOf": [
+								{
+									"description": "a dated reading",
+									"required": ["date", "timezone", "rating", "review"],
+									"not": {"required": ["undated"]}
+								},
+								{
+									"description": "an undated reading: no date, timezone, rating or review",
+									"required": ["undated"],
+									"not": {"anyOf": [{"required": ["date"]}, {"required": ["timezone"]}, {"required": ["rating"]}, {"required": ["review"]}]}
+								}
+							],
 							"additionalProperties": false
 						}
+					},
+					"remark": {
+						"description": "Free text remark about the book",
+						"type": "string"
 					}
 				},
 				"required": ["names", "authors", "language", "readings"],
